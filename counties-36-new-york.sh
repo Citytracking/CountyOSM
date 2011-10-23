@@ -22,14 +22,7 @@ osmosis \
     --rb tmp/new-york-routes-C.osm.pbf \
     --rb tmp/new-york-routes-D.osm.pbf \
     --merge --merge --merge \
-    --tee outputCount=7 \
-    --bp completeWays=yes file=polys/36005-Bronx-County.txt         --wx out/36/36005-bronx-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/36047-Kings-County.txt         --wx out/36/36047-kings-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/36059-Nassau-County.txt        --wx out/36/36059-nassau-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/36061-New-York-County.txt      --wx out/36/36061-new-york-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/36081-Queens-County.txt        --wx out/36/36081-queens-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/36085-Richmond-County.txt      --wx out/36/36085-richmond-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/36119-Westchester-County.txt   --wx out/36/36119-westchester-routes.osm.bz2 \
+    --wx tmp/new-york-routes.osm.bz2
 
 osmosis \
     --rb tmp/new-york-roads.osm.pbf \

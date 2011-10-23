@@ -22,12 +22,7 @@ osmosis \
     --rb tmp/rhode-island-routes-C.osm.pbf \
     --rb tmp/rhode-island-routes-D.osm.pbf \
     --merge --merge --merge \
-    --tee outputCount=5 \
-    --bp completeWays=yes file=polys/44001-Bristol-County.txt       --wx out/44/44001-bristol-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/44003-Kent-County.txt          --wx out/44/44003-kent-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/44005-Newport-County.txt       --wx out/44/44005-newport-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/44007-Providence-County.txt    --wx out/44/44007-providence-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/44009-Washington-County.txt    --wx out/44/44009-washington-routes.osm.bz2 \
+    --wx tmp/rhode-island-routes.osm.bz2
 
 osmosis \
     --rb tmp/rhode-island-roads.osm.pbf \

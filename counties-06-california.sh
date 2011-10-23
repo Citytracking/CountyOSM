@@ -22,14 +22,7 @@ osmosis \
     --rb tmp/california-routes-C.osm.pbf \
     --rb tmp/california-routes-D.osm.pbf \
     --merge --merge --merge \
-    --tee outputCount=7 \
-    --bp completeWays=yes file=polys/06001-Alameda-County.txt       --wx out/06/06001-alameda-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/06013-Contra-Costa-County.txt  --wx out/06/06013-contra-costa-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/06041-Marin-County.txt         --wx out/06/06041-marin-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/06075-San-Francisco-County.txt --wx out/06/06075-san-francisco-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/06081-San-Mateo-County.txt     --wx out/06/06081-san-mateo-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/06085-Santa-Clara-County.txt   --wx out/06/06085-santa-clara-routes.osm.bz2 \
-    --bp completeWays=yes file=polys/06087-Santa-Cruz-County.txt    --wx out/06/06087-santa-cruz-routes.osm.bz2 \
+    --wx tmp/california-routes.osm.bz2
 
 osmosis \
     --rb tmp/california-roads.osm.pbf \
