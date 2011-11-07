@@ -26,9 +26,7 @@ osmosis \
 
 osmosis \
     --rb tmp/california-roads.osm.pbf \
-    --tee outputCount=6 \
-    --bb left=-125 top=43 right=-119 bottom=39 \
-    --tee outputCount=9 \
+    --tee outputCount=58 \
     --bp completeWays=yes file=polys/06015-Del-Norte-County.txt         --wx out/06/i/06015-del-norte-county.osm.bz2 \
     --bp completeWays=yes file=polys/06023-Humboldt-County.txt          --wx out/06/i/06023-humboldt-county.osm.bz2 \
     --bp completeWays=yes file=polys/06035-Lassen-County.txt            --wx out/06/i/06035-lassen-county.osm.bz2 \
@@ -38,8 +36,6 @@ osmosis \
     --bp completeWays=yes file=polys/06093-Siskiyou-County.txt          --wx out/06/i/06093-siskiyou-county.osm.bz2 \
     --bp completeWays=yes file=polys/06103-Tehama-County.txt            --wx out/06/i/06103-tehama-county.osm.bz2 \
     --bp completeWays=yes file=polys/06105-Trinity-County.txt           --wx out/06/i/06105-trinity-county.osm.bz2 \
-    --bb left=-125 top=41 right=-119 bottom=37 \
-    --tee outputCount=18 \
     --bp completeWays=yes file=polys/06003-Alpine-County.txt            --wx out/06/ii/06003-alpine-county.osm.bz2 \
     --bp completeWays=yes file=polys/06005-Amador-County.txt            --wx out/06/ii/06005-amador-county.osm.bz2 \
     --bp completeWays=yes file=polys/06007-Butte-County.txt             --wx out/06/ii/06007-butte-county.osm.bz2 \
@@ -58,8 +54,6 @@ osmosis \
     --bp completeWays=yes file=polys/06101-Sutter-County.txt            --wx out/06/ii/06101-sutter-county.osm.bz2 \
     --bp completeWays=yes file=polys/06113-Yolo-County.txt              --wx out/06/ii/06113-yolo-county.osm.bz2 \
     --bp completeWays=yes file=polys/06115-Yuba-County.txt              --wx out/06/ii/06115-yuba-county.osm.bz2 \
-    --bb left=-124 top=39 right=-117 bottom=36 \
-    --tee outputCount=15 \
     --bp completeWays=yes file=polys/06001-Alameda-County.txt           --wx out/06/iii/06001-alameda-county.osm.bz2 \
     --bp completeWays=yes file=polys/06009-Calaveras-County.txt         --wx out/06/iii/06009-calaveras-county.osm.bz2 \
     --bp completeWays=yes file=polys/06013-Contra-Costa-County.txt      --wx out/06/iii/06013-contra-costa-county.osm.bz2 \
@@ -75,24 +69,18 @@ osmosis \
     --bp completeWays=yes file=polys/06087-Santa-Cruz-County.txt        --wx out/06/iii/06087-santa-cruz-county.osm.bz2 \
     --bp completeWays=yes file=polys/06099-Stanislaus-County.txt        --wx out/06/iii/06099-stanislaus-county.osm.bz2 \
     --bp completeWays=yes file=polys/06109-Tuolumne-County.txt          --wx out/06/iii/06109-tuolumne-county.osm.bz2 \
-    --bb left=-123 top=38 right=-115 bottom=35 \
-    --tee outputCount=6 \
     --bp completeWays=yes file=polys/06019-Fresno-County.txt            --wx out/06/iv/06019-fresno-county.osm.bz2 \
     --bp completeWays=yes file=polys/06027-Inyo-County.txt              --wx out/06/iv/06027-inyo-county.osm.bz2 \
     --bp completeWays=yes file=polys/06031-Kings-County.txt             --wx out/06/iv/06031-kings-county.osm.bz2 \
     --bp completeWays=yes file=polys/06053-Monterey-County.txt          --wx out/06/iv/06053-monterey-county.osm.bz2 \
     --bp completeWays=yes file=polys/06069-San-Benito-County.txt        --wx out/06/iv/06069-san-benito-county.osm.bz2 \
     --bp completeWays=yes file=polys/06107-Tulare-County.txt            --wx out/06/iv/06107-tulare-county.osm.bz2 \
-    --bb left=-122 top=36 right=-114 bottom=32 \
-    --tee outputCount=6 \
     --bp completeWays=yes file=polys/06029-Kern-County.txt              --wx out/06/v/06029-kern-county.osm.bz2 \
     --bp completeWays=yes file=polys/06037-Los-Angeles-County.txt       --wx out/06/v/06037-los-angeles-county.osm.bz2 \
     --bp completeWays=yes file=polys/06071-San-Bernardino-County.txt    --wx out/06/v/06071-san-bernardino-county.osm.bz2 \
     --bp completeWays=yes file=polys/06079-San-Luis-Obispo-County.txt   --wx out/06/v/06079-san-luis-obispo-county.osm.bz2 \
     --bp completeWays=yes file=polys/06083-Santa-Barbara-County.txt     --wx out/06/v/06083-santa-barbara-county.osm.bz2 \
     --bp completeWays=yes file=polys/06111-Ventura-County.txt           --wx out/06/v/06111-ventura-county.osm.bz2 \
-    --bb left=-119 top=35 right=-114 bottom=32 \
-    --tee outputCount=4 \
     --bp completeWays=yes file=polys/06025-Imperial-County.txt          --wx out/06/vi/06025-imperial-county.osm.bz2 \
     --bp completeWays=yes file=polys/06059-Orange-County.txt            --wx out/06/vi/06059-orange-county.osm.bz2 \
     --bp completeWays=yes file=polys/06065-Riverside-County.txt         --wx out/06/vi/06065-riverside-county.osm.bz2 \

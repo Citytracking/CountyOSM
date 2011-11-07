@@ -26,9 +26,7 @@ osmosis \
 
 osmosis \
     --rb tmp/texas-roads.osm.pbf \
-    --tee outputCount=5 \
-    --bb left=-104 top=37 right=-99 bottom=34 \
-    --tee outputCount=26 \
+    --tee outputCount=254 \
     --bp completeWays=yes file=polys/48011-Armstrong-County.txt     --wx out/48/n/48011-armstrong-county.osm.bz2 \
     --bp completeWays=yes file=polys/48045-Briscoe-County.txt       --wx out/48/n/48045-briscoe-county.osm.bz2 \
     --bp completeWays=yes file=polys/48065-Carson-County.txt        --wx out/48/n/48065-carson-county.osm.bz2 \
@@ -55,8 +53,6 @@ osmosis \
     --bp completeWays=yes file=polys/48421-Sherman-County.txt       --wx out/48/n/48421-sherman-county.osm.bz2 \
     --bp completeWays=yes file=polys/48437-Swisher-County.txt       --wx out/48/n/48437-swisher-county.osm.bz2 \
     --bp completeWays=yes file=polys/48483-Wheeler-County.txt       --wx out/48/n/48483-wheeler-county.osm.bz2 \
-    --bb left=-104 top=35 right=-93 bottom=31 \
-    --tee outputCount=88 \
     --bp completeWays=yes file=polys/48003-Andrews-County.txt       --wx out/48/nc/48003-andrews-county.osm.bz2 \
     --bp completeWays=yes file=polys/48009-Archer-County.txt        --wx out/48/nc/48009-archer-county.osm.bz2 \
     --bp completeWays=yes file=polys/48017-Bailey-County.txt        --wx out/48/nc/48017-bailey-county.osm.bz2 \
@@ -145,8 +141,6 @@ osmosis \
     --bp completeWays=yes file=polys/48499-Wood-County.txt          --wx out/48/nc/48499-wood-county.osm.bz2 \
     --bp completeWays=yes file=polys/48501-Yoakum-County.txt        --wx out/48/nc/48501-yoakum-county.osm.bz2 \
     --bp completeWays=yes file=polys/48503-Young-County.txt         --wx out/48/nc/48503-young-county.osm.bz2 \
-    --bb left=-107 top=33 right=-93 bottom=29 \
-    --tee outputCount=77 \
     --bp completeWays=yes file=polys/48001-Anderson-County.txt      --wx out/48/c/48001-anderson-county.osm.bz2 \
     --bp completeWays=yes file=polys/48005-Angelina-County.txt      --wx out/48/c/48005-angelina-county.osm.bz2 \
     --bp completeWays=yes file=polys/48021-Bastrop-County.txt       --wx out/48/c/48021-bastrop-county.osm.bz2 \
@@ -224,8 +218,6 @@ osmosis \
     --bp completeWays=yes file=polys/48477-Washington-County.txt    --wx out/48/c/48477-washington-county.osm.bz2 \
     --bp completeWays=yes file=polys/48491-Williamson-County.txt    --wx out/48/c/48491-williamson-county.osm.bz2 \
     --bp completeWays=yes file=polys/48495-Winkler-County.txt       --wx out/48/c/48495-winkler-county.osm.bz2 \
-    --bb left=-106 top=31 right=-93 bottom=27 \
-    --tee outputCount=49 \
     --bp completeWays=yes file=polys/48007-Aransas-County.txt       --wx out/48/sc/48007-aransas-county.osm.bz2 \
     --bp completeWays=yes file=polys/48013-Atascosa-County.txt      --wx out/48/sc/48013-atascosa-county.osm.bz2 \
     --bp completeWays=yes file=polys/48015-Austin-County.txt        --wx out/48/sc/48015-austin-county.osm.bz2 \
@@ -275,8 +267,6 @@ osmosis \
     --bp completeWays=yes file=polys/48481-Wharton-County.txt       --wx out/48/sc/48481-wharton-county.osm.bz2 \
     --bp completeWays=yes file=polys/48493-Wilson-County.txt        --wx out/48/sc/48493-wilson-county.osm.bz2 \
     --bp completeWays=yes file=polys/48507-Zavala-County.txt        --wx out/48/sc/48507-zavala-county.osm.bz2 \
-    --bb left=-101 top=29 right=-96 bottom=25 \
-    --tee outputCount=14 \
     --bp completeWays=yes file=polys/48047-Brooks-County.txt        --wx out/48/s/48047-brooks-county.osm.bz2 \
     --bp completeWays=yes file=polys/48061-Cameron-County.txt       --wx out/48/s/48061-cameron-county.osm.bz2 \
     --bp completeWays=yes file=polys/48131-Duval-County.txt         --wx out/48/s/48131-duval-county.osm.bz2 \
@@ -284,11 +274,11 @@ osmosis \
     --bp completeWays=yes file=polys/48247-Jim-Hogg-County.txt      --wx out/48/s/48247-jim-hogg-county.osm.bz2 \
     --bp completeWays=yes file=polys/48249-Jim-Wells-County.txt     --wx out/48/s/48249-jim-wells-county.osm.bz2 \
     --bp completeWays=yes file=polys/48261-Kenedy-County.txt        --wx out/48/s/48261-kenedy-county.osm.bz2 \
-    --bp completeWays=yes file=polys/48273-Kleberg-County.txt       --wx out/48/48273-kleberg-county.osm.bz2 \
-    --bp completeWays=yes file=polys/48355-Nueces-County.txt        --wx out/48/48355-nueces-county.osm.bz2 \
-    --bp completeWays=yes file=polys/48409-San-Patricio-County.txt  --wx out/48/48409-san-patricio-county.osm.bz2 \
-    --bp completeWays=yes file=polys/48427-Starr-County.txt         --wx out/48/48427-starr-county.osm.bz2 \
-    --bp completeWays=yes file=polys/48479-Webb-County.txt          --wx out/48/48479-webb-county.osm.bz2 \
-    --bp completeWays=yes file=polys/48489-Willacy-County.txt       --wx out/48/48489-willacy-county.osm.bz2 \
-    --bp completeWays=yes file=polys/48505-Zapata-County.txt        --wx out/48/48505-zapata-county.osm.bz2 \
+    --bp completeWays=yes file=polys/48273-Kleberg-County.txt       --wx out/48/s/48273-kleberg-county.osm.bz2 \
+    --bp completeWays=yes file=polys/48355-Nueces-County.txt        --wx out/48/s/48355-nueces-county.osm.bz2 \
+    --bp completeWays=yes file=polys/48409-San-Patricio-County.txt  --wx out/48/s/48409-san-patricio-county.osm.bz2 \
+    --bp completeWays=yes file=polys/48427-Starr-County.txt         --wx out/48/s/48427-starr-county.osm.bz2 \
+    --bp completeWays=yes file=polys/48479-Webb-County.txt          --wx out/48/s/48479-webb-county.osm.bz2 \
+    --bp completeWays=yes file=polys/48489-Willacy-County.txt       --wx out/48/s/48489-willacy-county.osm.bz2 \
+    --bp completeWays=yes file=polys/48505-Zapata-County.txt        --wx out/48/s/48505-zapata-county.osm.bz2 \
 
