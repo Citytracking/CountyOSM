@@ -13,8 +13,8 @@ osmosis --rb tmp/new-jersey.osm.pbf \
         --tee outputCount=4 \
             --tf accept-relations "network=US:I" --used-way --used-node --wb omitmetadata=true tmp/new-jersey-routes-A.osm.pbf \
             --tf accept-relations "network=US:US" --used-way --used-node --wb omitmetadata=true tmp/new-jersey-routes-B.osm.pbf \
-            --tf accept-relations "network=US:CT" --used-way --used-node --wb omitmetadata=true tmp/new-jersey-routes-C.osm.pbf \
-            --tf accept-relations "network=US:CT:CR" --used-way --used-node --wb omitmetadata=true tmp/new-jersey-routes-D.osm.pbf \
+            --tf accept-relations "network=US:NJ" --used-way --used-node --wb omitmetadata=true tmp/new-jersey-routes-C.osm.pbf \
+            --tf accept-relations "network=US:NJ:CR" --used-way --used-node --wb omitmetadata=true tmp/new-jersey-routes-D.osm.pbf \
 
 osmosis \
     --rb tmp/new-jersey-routes-A.osm.pbf \

@@ -13,8 +13,8 @@ osmosis --rb tmp/pennsylvania.osm.pbf \
         --tee outputCount=4 \
             --tf accept-relations "network=US:I" --used-way --used-node --wb omitmetadata=true tmp/pennsylvania-routes-A.osm.pbf \
             --tf accept-relations "network=US:US" --used-way --used-node --wb omitmetadata=true tmp/pennsylvania-routes-B.osm.pbf \
-            --tf accept-relations "network=US:CT" --used-way --used-node --wb omitmetadata=true tmp/pennsylvania-routes-C.osm.pbf \
-            --tf accept-relations "network=US:CT:CR" --used-way --used-node --wb omitmetadata=true tmp/pennsylvania-routes-D.osm.pbf \
+            --tf accept-relations "network=US:PA" --used-way --used-node --wb omitmetadata=true tmp/pennsylvania-routes-C.osm.pbf \
+            --tf accept-relations "network=US:PA:CR" --used-way --used-node --wb omitmetadata=true tmp/pennsylvania-routes-D.osm.pbf \
 
 osmosis \
     --rb tmp/pennsylvania-routes-A.osm.pbf \
