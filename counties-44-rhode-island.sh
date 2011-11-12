@@ -32,3 +32,6 @@ osmosis \
     --bp completeWays=yes file=polys/44005-Newport-County.txt       --wx out/44/44005-newport-roads.osm.bz2 \
     --bp completeWays=yes file=polys/44007-Providence-County.txt    --wx out/44/44007-providence-roads.osm.bz2 \
     --bp completeWays=yes file=polys/44009-Washington-County.txt    --wx out/44/44009-washington-roads.osm.bz2 \
+
+./skeletron-routes.sh tmp/rhode-island-routes.osm.bz2 out/44 rhode-island
+./skeletron-roads.sh tmp/rhode-island-roads.osm.pbf out/44 rhode-island

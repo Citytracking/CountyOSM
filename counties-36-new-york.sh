@@ -90,3 +90,5 @@ osmosis \
     --bp completeWays=yes file=polys/36/36085-Richmond-County.txt     --wx out/36/li/36085-richmond-county.osm.bz2 \
     --bp completeWays=yes file=polys/36/36103-Suffolk-County.txt      --wx out/36/li/36103-suffolk-county.osm.bz2 \
 
+./skeletron-routes.sh tmp/new-york-routes.osm.bz2 out/36 new-york
+./skeletron-roads.sh tmp/new-york-roads.osm.pbf out/36 new-york

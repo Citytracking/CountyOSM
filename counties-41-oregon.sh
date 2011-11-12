@@ -64,3 +64,5 @@ osmosis \
     --bp completeWays=yes file=polys/41/41039-Lane-County.txt       --wx out/41/s/41039-lane-county.osm.bz2 \
     --bp completeWays=yes file=polys/41/41045-Malheur-County.txt    --wx out/41/s/41045-malheur-county.osm.bz2 \
 
+./skeletron-routes.sh tmp/oregon-routes.osm.bz2 out/41 oregon
+./skeletron-roads.sh tmp/oregon-roads.osm.pbf out/41 oregon

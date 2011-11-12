@@ -36,3 +36,5 @@ osmosis \
     --bp completeWays=yes file=polys/09/09013-Tolland-County.txt    --wx out/09/09013-tolland-county.osm.bz2 \
     --bp completeWays=yes file=polys/09/09015-Windham-County.txt    --wx out/09/09015-windham-county.osm.bz2 \
 
+./skeletron-routes.sh tmp/connecticut-routes.osm.bz2 out/09 connecticut
+./skeletron-roads.sh tmp/connecticut-roads.osm.pbf out/09 connecticut

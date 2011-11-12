@@ -100,3 +100,5 @@ osmosis \
     --bp completeWays=yes file=polys/55/55137-Waushara-County.txt    --wx out/55/s/55137-waushara-county.osm.bz2 \
     --bp completeWays=yes file=polys/55/55139-Winnebago-County.txt   --wx out/55/s/55139-winnebago-county.osm.bz2 \
 
+./skeletron-routes.sh tmp/wisconsin-routes.osm.bz2 out/55 wisconsin
+./skeletron-roads.sh tmp/wisconsin-roads.osm.pbf out/55 wisconsin

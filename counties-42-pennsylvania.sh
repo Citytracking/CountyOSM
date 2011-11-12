@@ -95,3 +95,5 @@ osmosis \
     --bp completeWays=yes file=polys/42/42129-Westmoreland-County.txt   --wx out/42/s/42129-westmoreland-county.osm.bz2 \
     --bp completeWays=yes file=polys/42/42133-York-County.txt           --wx out/42/s/42133-york-county.osm.bz2 \
 
+./skeletron-routes.sh tmp/pennsylvania-routes.osm.bz2 out/42 pennsylvania
+./skeletron-roads.sh tmp/pennsylvania-roads.osm.pbf out/42 pennsylvania

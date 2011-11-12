@@ -282,3 +282,5 @@ osmosis \
     --bp completeWays=yes file=polys/48489-Willacy-County.txt       --wx out/48/s/48489-willacy-county.osm.bz2 \
     --bp completeWays=yes file=polys/48505-Zapata-County.txt        --wx out/48/s/48505-zapata-county.osm.bz2 \
 
+./skeletron-routes.sh tmp/texas-routes.osm.bz2 out/48 texas
+./skeletron-roads.sh tmp/texas-roads.osm.pbf out/48 texas
