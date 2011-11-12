@@ -1,9 +1,9 @@
 .PHONY: all tiny \
-	    out/06 out/09 out/10 out/12 out/13 out/16 out/17 out/25 out/32 out/34 \
-	    out/36 out/41 out/42 out/44 out/48 out/53 out/55
+	    out/06 out/08 out/09 out/10 out/12 out/13 out/16 out/17 out/25 out/32 \
+	    out/34 out/36 out/41 out/42 out/44 out/48 out/53 out/55
 
-all: out/48 out/06 out/36 out/09 out/10 out/12 out/13 out/16 out/17 out/17 \
-	 out/32 out/34 out/41 out/42 out/44 out/53 out/55
+all: out/48 out/06 out/36 out/08 out/09 out/10 out/12 out/13 out/16 out/17 \
+	 out/25 out/32 out/34 out/41 out/42 out/44 out/53 out/55
 	#
 
 tiny: out/10 out/34 out/44
@@ -11,6 +11,9 @@ tiny: out/10 out/34 out/44
 
 out/06:
 	./counties-06-california.sh
+
+out/08:
+	./counties-08-colorado.sh
 
 out/09:
 	./counties-09-connecticut.sh
