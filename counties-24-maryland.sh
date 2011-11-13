@@ -52,5 +52,5 @@ osmosis \
     --bp completeWays=yes file=polys/24/24047-Worcester-County.txt      --wx out/24/24047-worcester-county.osm.bz2 \
     --bp completeWays=yes file=polys/24/24510-Baltimore-city.txt        --wx out/24/24510-baltimore-city.osm.bz2 \
 
-./skeletron-routes.sh tmp/maryland-routes.osm.bz2 out/24 maryland
 ./skeletron-roads.sh tmp/maryland-roads.osm.pbf out/24 maryland
+./skeletron-routes.sh tmp/maryland-routes.osm.bz2 out/24 maryland

@@ -31,5 +31,5 @@ osmosis \
     --bp completeWays=yes file=polys/10003-New-Castle-County.txt    --wx out/10/10003-new-castle-roads.osm.bz2 \
     --bp completeWays=yes file=polys/10005-Sussex-County.txt        --wx out/10/10005-sussex-roads.osm.bz2 \
 
-./skeletron-routes.sh tmp/delaware-routes.osm.bz2 out/10 delaware
 ./skeletron-roads.sh tmp/delaware-roads.osm.pbf out/10 delaware
+./skeletron-routes.sh tmp/delaware-routes.osm.bz2 out/10 delaware

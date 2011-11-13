@@ -95,5 +95,5 @@ osmosis \
     --bp completeWays=yes file=polys/12/12117-Seminole-County.txt     --wx out/12/e/12117-seminole-county.osm.bz2 \
     --bp completeWays=yes file=polys/12/12127-Volusia-County.txt      --wx out/12/e/12127-volusia-county.osm.bz2 \
 
-./skeletron-routes.sh tmp/florida-routes.osm.bz2 out/12 florida
 ./skeletron-roads.sh tmp/florida-roads.osm.pbf out/12 florida
+./skeletron-routes.sh tmp/florida-routes.osm.bz2 out/12 florida

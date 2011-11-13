@@ -130,5 +130,5 @@ osmosis \
     --bp completeWays=yes file=polys/17/17197-Will-County.txt        --wx out/17/e/17197-will-county.osm.bz2 \
     --bp completeWays=yes file=polys/17/17199-Williamson-County.txt  --wx out/17/e/17199-williamson-county.osm.bz2 \
 
-./skeletron-routes.sh tmp/illinois-routes.osm.bz2 out/17 illinois
 ./skeletron-roads.sh tmp/illinois-roads.osm.pbf out/17 illinois
+./skeletron-routes.sh tmp/illinois-routes.osm.bz2 out/17 illinois

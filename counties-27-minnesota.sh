@@ -115,5 +115,5 @@ osmosis \
     --bp completeWays=yes file=polys/27/27171-Wright-County.txt            --wx out/27/s/27171-wright-county.osm.bz2 \
     --bp completeWays=yes file=polys/27/27173-Yellow-Medicine-County.txt   --wx out/27/s/27173-yellow-medicine-county.osm.bz2 \
 
-./skeletron-routes.sh tmp/minnesota-routes.osm.bz2 out/27 minnesota
 ./skeletron-roads.sh tmp/minnesota-roads.osm.pbf out/27 minnesota
+./skeletron-routes.sh tmp/minnesota-routes.osm.bz2 out/27 minnesota
