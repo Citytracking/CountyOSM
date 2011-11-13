@@ -47,7 +47,3 @@ zip -j $OUTDIR/$PREFIX-roads-z14.zip $TMPDIR/$PREFIX-roads-z14.???
 skeletron-osm-streets.py -z 15 -w 15 --ignore-highway $OSM1 $TMPDIR/roads-z15.json; 
 ogr2ogr -t_srs EPSG:900913 $TMPDIR/$PREFIX-roads-z15.shp $TMPDIR/roads-z15.json;
 zip -j $OUTDIR/$PREFIX-roads-z15.zip $TMPDIR/$PREFIX-roads-z15.???
-
-skeletron-osm-streets.py -z 16 -w 15 --ignore-highway $OSM1 $TMPDIR/roads-z16.json; 
-ogr2ogr -t_srs EPSG:900913 $TMPDIR/$PREFIX-roads-z16.shp $TMPDIR/roads-z16.json;
-zip -j $OUTDIR/$PREFIX-roads-z16.zip $TMPDIR/$PREFIX-roads-z16.???

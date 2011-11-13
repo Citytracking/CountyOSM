@@ -22,7 +22,7 @@ PREFIX=$3;
 TMPDIR=`tempfile -d tmp -p skel-`;
 rm $TMPDIR && mkdir $TMPDIR;
 
-for Z in 10 11 12 13 14 15 16; do
+for Z in 10 11 12 13 14 15; do
 
     skeletron-osm-route-rels.py -z $Z -w 20 --merge-highways largest $INPUT $TMPDIR/routes-z$Z.json; 
     ogr2ogr -t_srs EPSG:900913 $TMPDIR/$PREFIX-routes-z$Z.shp $TMPDIR/routes-z$Z.json;
