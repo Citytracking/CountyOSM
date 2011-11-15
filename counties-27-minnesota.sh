@@ -26,7 +26,7 @@ osmosis \
 
 osmosis \
     --rb tmp/minnesota-roads.osm.pbf \
-    --tee outputCount=90 \
+    --tee outputCount=87 \
     --bp completeWays=yes file=polys/27/27007-Beltrami-County.txt          --wx out/27/n/27007-beltrami-county.osm.bz2 \
     --bp completeWays=yes file=polys/27/27029-Clearwater-County.txt        --wx out/27/n/27029-clearwater-county.osm.bz2 \
     --bp completeWays=yes file=polys/27/27031-Cook-County.txt              --wx out/27/n/27031-cook-county.osm.bz2 \
