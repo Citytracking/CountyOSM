@@ -26,7 +26,7 @@ osmosis \
 
 osmosis \
     --rb tmp/maryland-roads.osm.pbf \
-    --tee outputCount=8 \
+    --tee outputCount=24 \
     --bp completeWays=yes file=polys/24/24001-Allegany-County.txt       --wx out/24/24001-allegany-county.osm.bz2 \
     --bp completeWays=yes file=polys/24/24003-Anne-Arundel-County.txt   --wx out/24/24003-anne-arundel-county.osm.bz2 \
     --bp completeWays=yes file=polys/24/24005-Baltimore-County.txt      --wx out/24/24005-baltimore-county.osm.bz2 \
