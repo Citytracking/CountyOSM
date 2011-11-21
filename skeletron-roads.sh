@@ -47,3 +47,10 @@ zip -j $OUTDIR/$PREFIX-roads-z14.zip $TMPDIR/$PREFIX-roads-z14.???
 skeletron-osm-streets.py -z 15 -w 15 --ignore-highway $OSM1 $TMPDIR/roads-z15.json; 
 ogr2ogr -t_srs EPSG:900913 $TMPDIR/$PREFIX-roads-z15.shp $TMPDIR/roads-z15.json;
 zip -j $OUTDIR/$PREFIX-roads-z15.zip $TMPDIR/$PREFIX-roads-z15.???
+
+FIPS=`basename $OUTDIR`;
+
+shp2pgsql -dID -s 900913 $TMPDIR/$PREFIX-roads-z12.shp roads$FIPS > $OUTDIR/roads-$FIPS.pgsql;
+shp2pgsql -aD -s 900913 $TMPDIR/$PREFIX-roads-z13.shp roads$FIPS >> $OUTDIR/roads-$FIPS.pgsql;
+shp2pgsql -aD -s 900913 $TMPDIR/$PREFIX-roads-z14.shp roads$FIPS >> $OUTDIR/roads-$FIPS.pgsql;
+shp2pgsql -aD -s 900913 $TMPDIR/$PREFIX-roads-z15.shp roads$FIPS >> $OUTDIR/roads-$FIPS.pgsql;
