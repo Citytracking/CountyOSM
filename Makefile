@@ -1,11 +1,11 @@
 .PHONY: all tiny \
 	    out/04 out/06 out/08 out/09 out/10 out/12 out/13 out/16 out/17 out/22 \
-	    out/24 out/25 out/27 out/30 out/32 out/34 out/35 out/36 out/41 out/42 \
-	    out/44 out/48 out/49 out/53 out/55 out/56
+	    out/24 out/25 out/27 out/28 out/30 out/32 out/34 out/35 out/36 out/41 \
+	    out/42 out/44 out/48 out/49 out/53 out/55 out/56
 
 all: out/48 out/06 out/36 out/04 out/08 out/09 out/10 out/12 out/13 out/16 \
-	 out/17 out/22 out/24 out/25 out/27 out/30 out/32 out/34 out/35 out/41 \
-	 out/42 out/44 out/49 out/53 out/55 out/56
+	 out/17 out/22 out/24 out/25 out/27 out/28 out/30 out/32 out/34 out/35 \
+	 out/41 out/42 out/44 out/49 out/53 out/55 out/56
 	#
 
 tiny: out/10 out/34 out/44
@@ -49,6 +49,9 @@ out/25:
 
 out/27:
 	./counties-27-minnesota.sh
+
+out/28:
+	./counties-28-mississippi.sh
 
 out/30:
 	./counties-30-montana.sh
