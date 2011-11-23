@@ -1,13 +1,13 @@
 .PHONY: all tiny \
 	    out/01 out/04 out/06 out/08 out/09 out/10 out/12 out/13 out/16 out/17 \
-	    out/22 out/24 out/25 out/27 out/28 out/30 out/32 out/34 out/35 out/36 \
-	    out/37 out/41 out/42 out/44 out/45 out/48 out/49 out/51 out/53 out/55 \
-	    out/56
+	    out/22 out/23 out/24 out/25 out/27 out/28 out/30 out/32 out/33 out/34 \
+	    out/35 out/36 out/37 out/41 out/42 out/44 out/45 out/48 out/49 out/50 \
+	    out/51 out/53 out/55 out/56
 
 all: out/48 out/06 out/36 out/01 out/04 out/08 out/09 out/10 out/12 out/13 \
-	 out/16 out/17 out/22 out/24 out/25 out/27 out/28 out/30 out/32 out/34 \
-	 out/35 out/37 out/41 out/42 out/44 out/45 out/49 out/51 out/53 out/55 \
-	 out/56
+	 out/16 out/17 out/22 out/23 out/24 out/25 out/27 out/28 out/30 out/32 \
+	 out/33 out/34 out/35 out/37 out/41 out/42 out/44 out/45 out/49 out/50 out/51 \
+	 out/53 out/55 out/56
 	#
 
 tiny: out/10 out/34 out/44
@@ -46,6 +46,9 @@ out/17:
 out/22:
 	./counties-22-louisiana.sh
 
+out/23:
+	./counties-23-maine.sh
+
 out/24:
 	./counties-24-maryland.sh
 
@@ -63,6 +66,9 @@ out/30:
 
 out/32:
 	./counties-32-nevada.sh
+
+out/33:
+	./counties-33-new-hampshire.sh
 
 out/34:
 	./counties-34-new-jersey.sh
@@ -93,6 +99,9 @@ out/48:
 
 out/49:
 	./counties-49-utah.sh
+
+out/50:
+	./counties-50-vermont.sh
 
 out/51:
 	./counties-51-virginia.sh
