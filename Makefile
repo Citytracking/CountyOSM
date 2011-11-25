@@ -1,13 +1,15 @@
 .PHONY: all tiny \
-	    out/01 out/04 out/06 out/08 out/09 out/10 out/12 out/13 out/16 out/17 \
-	    out/20 out/22 out/23 out/24 out/25 out/27 out/28 out/30 out/31 out/32 \
-	    out/33 out/34 out/35 out/36 out/37 out/38 out/40 out/41 out/42 out/44 \
-	    out/45 out/46 out/48 out/49 out/50 out/51 out/53 out/55 out/56
+	    out/01 out/04 out/05 out/06 out/08 out/09 out/10 out/12 out/13 out/16 \
+	    out/17 out/18 out/19 out/20 out/21 out/22 out/23 out/24 out/25 out/27 \
+	    out/28 out/29 out/30 out/31 out/32 out/33 out/34 out/35 out/36 out/37 \
+	    out/38 out/40 out/41 out/42 out/44 out/45 out/46 out/47 out/48 out/49 \
+	    out/50 out/51 out/53 out/55 out/56
 
-all: out/48 out/06 out/36 out/01 out/04 out/08 out/09 out/10 out/12 out/13 \
-	 out/16 out/17 out/20 out/22 out/23 out/24 out/25 out/27 out/28 out/30 \
-	 out/31 out/32 out/33 out/34 out/35 out/37 out/38 out/40 out/41 out/42 \
-	 out/44 out/45 out/46 out/49 out/50 out/51 out/53 out/55 out/56
+all: out/48 out/06 out/36 out/01 out/04 out/05 out/08 out/09 out/10 out/12 \
+	 out/13 out/16 out/17 out/18 out/19 out/20 out/21 out/22 out/23 out/24 \
+	 out/25 out/27 out/28 out/29 out/30 out/31 out/32 out/33 out/34 out/35 \
+	 out/37 out/38 out/40 out/41 out/42 out/44 out/45 out/46 out/47 out/49 \
+	 out/50 out/51 out/53 out/55 out/56
 	#
 
 tiny: out/10 out/34 out/44
@@ -18,6 +20,9 @@ out/01:
 
 out/04:
 	./counties-04-arizona.sh
+
+out/05:
+	./counties-05-arkansas.sh
 
 out/06:
 	./counties-06-california.sh
@@ -43,8 +48,17 @@ out/16:
 out/17:
 	./counties-17-illinois.sh
 
+out/18:
+	./counties-18-indiana.sh
+
+out/19:
+	./counties-19-iowa.sh
+
 out/20:
 	./counties-20-kansas.sh
+
+out/21:
+	./counties-21-kentucky.sh
 
 out/22:
 	./counties-22-louisiana.sh
@@ -63,6 +77,9 @@ out/27:
 
 out/28:
 	./counties-28-mississippi.sh
+
+out/29:
+	./counties-29-missouri.sh
 
 out/30:
 	./counties-30-montana.sh
@@ -108,6 +125,9 @@ out/45:
 
 out/46:
 	./counties-46-south-dakota.sh
+
+out/47:
+	./counties-47-tennessee.sh
 
 out/48:
 	./counties-48-texas.sh
