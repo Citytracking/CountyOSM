@@ -27,11 +27,11 @@ osmosis \
 osmosis \
     --rb tmp/rhode-island-roads.osm.pbf \
     --tee outputCount=5 \
-    --bp completeWays=yes file=polys/44001-Bristol-County.txt       --wx out/44/44001-bristol-roads.osm.bz2 \
-    --bp completeWays=yes file=polys/44003-Kent-County.txt          --wx out/44/44003-kent-roads.osm.bz2 \
-    --bp completeWays=yes file=polys/44005-Newport-County.txt       --wx out/44/44005-newport-roads.osm.bz2 \
-    --bp completeWays=yes file=polys/44007-Providence-County.txt    --wx out/44/44007-providence-roads.osm.bz2 \
-    --bp completeWays=yes file=polys/44009-Washington-County.txt    --wx out/44/44009-washington-roads.osm.bz2 \
+    --bp completeWays=yes file=polys/44/44001-Bristol-County.txt       --wx out/44/44001-bristol-roads.osm.bz2 \
+    --bp completeWays=yes file=polys/44/44003-Kent-County.txt          --wx out/44/44003-kent-roads.osm.bz2 \
+    --bp completeWays=yes file=polys/44/44005-Newport-County.txt       --wx out/44/44005-newport-roads.osm.bz2 \
+    --bp completeWays=yes file=polys/44/44007-Providence-County.txt    --wx out/44/44007-providence-roads.osm.bz2 \
+    --bp completeWays=yes file=polys/44/44009-Washington-County.txt    --wx out/44/44009-washington-roads.osm.bz2 \
 
 ./skeletron-roads.sh tmp/rhode-island-roads.osm.pbf out/44 rhode-island
 ./skeletron-routes.sh tmp/rhode-island-routes.osm.bz2 out/44 rhode-island
