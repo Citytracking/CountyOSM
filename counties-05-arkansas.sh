@@ -107,5 +107,3 @@ touch -r tmp/arkansas.osm.pbf out/05/*/*.osm.???
 
 ./skeletron-roads.sh tmp/arkansas-roads.osm.pbf out/05 arkansas
 ./skeletron-routes.sh tmp/arkansas-routes.osm.bz2 out/05 arkansas
-
-touch -r tmp/arkansas.osm.pbf out/05/*.pgsql

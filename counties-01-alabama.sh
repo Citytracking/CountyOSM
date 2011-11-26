@@ -99,5 +99,3 @@ touch -r tmp/alabama.osm.pbf out/01/*/*.osm.???
 
 ./skeletron-roads.sh tmp/alabama-roads.osm.pbf out/01 alabama
 ./skeletron-routes.sh tmp/alabama-routes.osm.bz2 out/01 alabama
-
-touch -r tmp/alabama.osm.pbf out/01/*.pgsql

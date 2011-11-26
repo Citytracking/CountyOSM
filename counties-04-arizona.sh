@@ -47,5 +47,3 @@ touch -r tmp/arizona.osm.pbf out/04/*/*.osm.???
 
 ./skeletron-roads.sh tmp/arizona-roads.osm.pbf out/04 arizona
 ./skeletron-routes.sh tmp/arizona-routes.osm.bz2 out/04 arizona
-
-touch -r tmp/arizona.osm.pbf out/04/*.pgsql

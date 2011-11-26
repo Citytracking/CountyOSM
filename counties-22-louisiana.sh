@@ -96,5 +96,3 @@ touch -r tmp/louisiana.osm.pbf out/22/*/*.osm.???
 
 ./skeletron-roads.sh tmp/louisiana-roads.osm.pbf out/22 louisiana
 ./skeletron-routes.sh tmp/louisiana-routes.osm.bz2 out/22 louisiana
-
-touch -r tmp/louisiana.osm.pbf out/22/*.pgsql

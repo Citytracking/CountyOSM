@@ -131,5 +131,3 @@ touch -r tmp/iowa.osm.pbf out/19/*/*.osm.???
 
 ./skeletron-roads.sh tmp/iowa-roads.osm.pbf out/19 iowa
 ./skeletron-routes.sh tmp/iowa-routes.osm.bz2 out/19 iowa
-
-touch -r tmp/iowa.osm.pbf out/19/*.pgsql

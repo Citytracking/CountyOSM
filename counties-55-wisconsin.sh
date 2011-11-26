@@ -104,5 +104,3 @@ touch -r tmp/wisconsin.osm.pbf out/55/*/*.osm.???
 
 ./skeletron-roads.sh tmp/wisconsin-roads.osm.pbf out/55 wisconsin
 ./skeletron-routes.sh tmp/wisconsin-routes.osm.bz2 out/55 wisconsin
-
-touch -r tmp/wisconsin.osm.pbf out/55/*.pgsql

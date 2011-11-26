@@ -78,5 +78,3 @@ touch -r tmp/south-carolina.osm.pbf out/45/*/*.osm.???
 
 ./skeletron-roads.sh tmp/south-carolina-roads.osm.pbf out/45 south-carolina
 ./skeletron-routes.sh tmp/south-carolina-routes.osm.bz2 out/45 south-carolina
-
-touch -r tmp/south-carolina.osm.pbf out/45/*.pgsql

@@ -88,5 +88,3 @@ touch -r tmp/montana.osm.pbf out/30/*/*.osm.???
 
 ./skeletron-roads.sh tmp/montana-roads.osm.pbf out/30 montana
 ./skeletron-routes.sh tmp/montana-routes.osm.bz2 out/30 montana
-
-touch -r tmp/montana.osm.pbf out/30/*.pgsql

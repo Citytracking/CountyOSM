@@ -65,5 +65,3 @@ touch -r tmp/new-mexico.osm.pbf out/35/*/*.osm.???
 
 ./skeletron-roads.sh tmp/new-mexico-roads.osm.pbf out/35 new-mexico
 ./skeletron-routes.sh tmp/new-mexico-routes.osm.bz2 out/35 new-mexico
-
-touch -r tmp/new-mexico.osm.pbf out/35/*.pgsql

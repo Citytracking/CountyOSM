@@ -191,5 +191,3 @@ touch -r tmp/georgia.osm.pbf out/13/*/*.osm.???
 
 ./skeletron-roads.sh tmp/georgia-roads.osm.pbf out/13 georgia
 ./skeletron-routes.sh tmp/georgia-routes.osm.bz2 out/13 georgia
-
-touch -r tmp/georgia.osm.pbf out/13/*.pgsql

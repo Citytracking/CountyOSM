@@ -286,5 +286,3 @@ touch -r tmp/texas.osm.pbf out/48/*/*.osm.???
 
 ./skeletron-roads.sh tmp/texas-roads.osm.pbf out/48 texas
 ./skeletron-routes.sh tmp/texas-routes.osm.bz2 out/48 texas
-
-touch -r tmp/texas.osm.pbf out/48/*.pgsql

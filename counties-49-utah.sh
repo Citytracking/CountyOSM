@@ -61,5 +61,3 @@ touch -r tmp/utah.osm.pbf out/49/*/*.osm.???
 
 ./skeletron-roads.sh tmp/utah-roads.osm.pbf out/49 utah
 ./skeletron-routes.sh tmp/utah-routes.osm.bz2 out/49 utah
-
-touch -r tmp/utah.osm.pbf out/49/*.pgsql

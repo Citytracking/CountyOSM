@@ -137,5 +137,3 @@ touch -r tmp/kansas.osm.pbf out/20/*/*.osm.???
 
 ./skeletron-roads.sh tmp/kansas-roads.osm.pbf out/20 kansas
 ./skeletron-routes.sh tmp/kansas-routes.osm.bz2 out/20 kansas
-
-touch -r tmp/kansas.osm.pbf out/20/*.pgsql

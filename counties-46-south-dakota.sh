@@ -98,5 +98,3 @@ touch -r tmp/south-dakota.osm.pbf out/46/*/*.osm.???
 
 ./skeletron-roads.sh tmp/south-dakota-roads.osm.pbf out/46 south-dakota
 ./skeletron-routes.sh tmp/south-dakota-routes.osm.bz2 out/46 south-dakota
-
-touch -r tmp/south-dakota.osm.pbf out/46/*.pgsql

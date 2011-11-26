@@ -49,5 +49,3 @@ touch -r tmp/nevada.osm.pbf out/32/*/*.osm.???
 
 ./skeletron-roads.sh tmp/nevada-roads.osm.pbf out/32 nevada
 ./skeletron-routes.sh tmp/nevada-routes.osm.bz2 out/32 nevada
-
-touch -r tmp/nevada.osm.pbf out/32/*.pgsql

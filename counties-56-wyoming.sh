@@ -55,5 +55,3 @@ touch -r tmp/wyoming.osm.pbf out/56/*/*.osm.???
 
 ./skeletron-roads.sh tmp/wyoming-roads.osm.pbf out/56 wyoming
 ./skeletron-routes.sh tmp/wyoming-routes.osm.bz2 out/56 wyoming
-
-touch -r tmp/wyoming.osm.pbf out/56/*.pgsql

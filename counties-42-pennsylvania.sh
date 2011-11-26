@@ -99,5 +99,3 @@ touch -r tmp/pennsylvania.osm.pbf out/42/*/*.osm.???
 
 ./skeletron-roads.sh tmp/pennsylvania-roads.osm.pbf out/42 pennsylvania
 ./skeletron-routes.sh tmp/pennsylvania-routes.osm.bz2 out/42 pennsylvania
-
-touch -r tmp/pennsylvania.osm.pbf out/42/*.pgsql

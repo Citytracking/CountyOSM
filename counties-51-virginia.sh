@@ -166,5 +166,3 @@ touch -r tmp/virginia.osm.pbf out/51/*/*.osm.???
 
 ./skeletron-roads.sh tmp/virginia-roads.osm.pbf out/51 virginia
 ./skeletron-routes.sh tmp/virginia-routes.osm.bz2 out/51 virginia
-
-touch -r tmp/virginia.osm.pbf out/51/*.pgsql

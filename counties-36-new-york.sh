@@ -94,5 +94,3 @@ touch -r tmp/new-york.osm.pbf out/36/*/*.osm.???
 
 ./skeletron-roads.sh tmp/new-york-roads.osm.pbf out/36 new-york
 ./skeletron-routes.sh tmp/new-york-routes.osm.bz2 out/36 new-york
-
-touch -r tmp/new-york.osm.pbf out/36/*.pgsql

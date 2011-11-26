@@ -124,5 +124,3 @@ touch -r tmp/indiana.osm.pbf out/18/*/*.osm.???
 
 ./skeletron-roads.sh tmp/indiana-roads.osm.pbf out/18 indiana
 ./skeletron-routes.sh tmp/indiana-routes.osm.bz2 out/18 indiana
-
-touch -r tmp/indiana.osm.pbf out/18/*.pgsql

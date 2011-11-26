@@ -119,5 +119,3 @@ touch -r tmp/minnesota.osm.pbf out/27/*/*.osm.???
 
 ./skeletron-roads.sh tmp/minnesota-roads.osm.pbf out/27 minnesota
 ./skeletron-routes.sh tmp/minnesota-routes.osm.bz2 out/27 minnesota
-
-touch -r tmp/minnesota.osm.pbf out/27/*.pgsql

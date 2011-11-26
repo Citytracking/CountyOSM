@@ -114,5 +114,3 @@ touch -r tmp/mississippi.osm.pbf out/28/*/*.osm.???
 
 ./skeletron-roads.sh tmp/mississippi-roads.osm.pbf out/28 mississippi
 ./skeletron-routes.sh tmp/mississippi-routes.osm.bz2 out/28 mississippi
-
-touch -r tmp/mississippi.osm.pbf out/28/*.pgsql

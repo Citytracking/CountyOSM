@@ -42,5 +42,3 @@ touch -r tmp/new-hampshire.osm.pbf out/33/*.osm.???
 
 ./skeletron-roads.sh tmp/new-hampshire-roads.osm.pbf out/33 new-hampshire
 ./skeletron-routes.sh tmp/new-hampshire-routes.osm.bz2 out/33 new-hampshire
-
-touch -r tmp/new-hampshire.osm.pbf out/33/*.pgsql
