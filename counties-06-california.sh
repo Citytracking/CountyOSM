@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/06/i out/06/ii out/06/iii out/06/iv out/06/v out/06/vi
 
-curl -s -o tmp/california.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/california.osm.pbf
+curl -Rs -o tmp/california.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/california.osm.pbf
 
 osmosis --rb tmp/california.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -86,5 +86,9 @@ osmosis \
     --bp completeWays=yes file=polys/06/06065-Riverside-County.txt         --wx out/06/vi/06065-riverside-county.osm.bz2 \
     --bp completeWays=yes file=polys/06/06073-San-Diego-County.txt         --wx out/06/vi/06073-san-diego-county.osm.bz2 \
 
+touch -r tmp/california.osm.pbf out/06/*.osm.???
+
 ./skeletron-roads.sh tmp/california-roads.osm.pbf out/06 california
 ./skeletron-routes.sh tmp/california-routes.osm.bz2 out/06 california
+
+touch -r tmp/california.osm.pbf out/06/*.pgsql

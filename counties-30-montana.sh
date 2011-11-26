@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/30/n out/30/c out/30/s
 
-curl -s -o tmp/montana.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/montana.osm.pbf
+curl -Rs -o tmp/montana.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/montana.osm.pbf
 
 osmosis --rb tmp/montana.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -84,5 +84,9 @@ osmosis \
     --bp completeWays=yes file=polys/30/30107-Wheatland-County.txt       --wx out/30/s/30107-wheatland-county.osm.bz2 \
     --bp completeWays=yes file=polys/30/30111-Yellowstone-County.txt     --wx out/30/s/30111-yellowstone-county.osm.bz2 \
 
+touch -r tmp/montana.osm.pbf out/30/*.osm.???
+
 ./skeletron-roads.sh tmp/montana-roads.osm.pbf out/30 montana
 ./skeletron-routes.sh tmp/montana-routes.osm.bz2 out/30 montana
+
+touch -r tmp/montana.osm.pbf out/30/*.pgsql

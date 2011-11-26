@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/32/w out/32/c out/32/e
 
-curl -s -o tmp/nevada.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/nevada.osm.pbf
+curl -Rs -o tmp/nevada.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/nevada.osm.pbf
 
 osmosis --rb tmp/nevada.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -45,5 +45,9 @@ osmosis \
     --bp completeWays=yes file=polys/32/32017-Lincoln-County.txt    --wx out/32/e/32017-lincoln-county.osm.bz2 \
     --bp completeWays=yes file=polys/32/32033-White-Pine-County.txt --wx out/32/e/32033-white-pine-county.osm.bz2 \
 
+touch -r tmp/nevada.osm.pbf out/32/*.osm.???
+
 ./skeletron-roads.sh tmp/nevada-roads.osm.pbf out/32 nevada
 ./skeletron-routes.sh tmp/nevada-routes.osm.bz2 out/32 nevada
+
+touch -r tmp/nevada.osm.pbf out/32/*.pgsql

@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/33
 
-curl -s -o tmp/new-hampshire.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/new-hampshire.osm.pbf
+curl -Rs -o tmp/new-hampshire.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/new-hampshire.osm.pbf
 
 osmosis --rb tmp/new-hampshire.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -38,5 +38,9 @@ osmosis \
     --bp completeWays=yes file=polys/33/33017-Strafford-County.txt    --wx out/33/33017-strafford-county.osm.bz2 \
     --bp completeWays=yes file=polys/33/33019-Sullivan-County.txt     --wx out/33/33019-sullivan-county.osm.bz2 \
 
+touch -r tmp/new-hampshire.osm.pbf out/33/*.osm.???
+
 ./skeletron-roads.sh tmp/new-hampshire-roads.osm.pbf out/33 new-hampshire
 ./skeletron-routes.sh tmp/new-hampshire-routes.osm.bz2 out/33 new-hampshire
+
+touch -r tmp/new-hampshire.osm.pbf out/33/*.pgsql

@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/36/w out/36/c out/36/e out/36/li
 
-curl -s -o tmp/new-york.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/new-york.osm.pbf
+curl -Rs -o tmp/new-york.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/new-york.osm.pbf
 
 osmosis --rb tmp/new-york.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -90,5 +90,9 @@ osmosis \
     --bp completeWays=yes file=polys/36/36085-Richmond-County.txt     --wx out/36/li/36085-richmond-county.osm.bz2 \
     --bp completeWays=yes file=polys/36/36103-Suffolk-County.txt      --wx out/36/li/36103-suffolk-county.osm.bz2 \
 
+touch -r tmp/new-york.osm.pbf out/36/*.osm.???
+
 ./skeletron-roads.sh tmp/new-york-roads.osm.pbf out/36 new-york
 ./skeletron-routes.sh tmp/new-york-routes.osm.bz2 out/36 new-york
+
+touch -r tmp/new-york.osm.pbf out/36/*.pgsql

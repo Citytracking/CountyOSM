@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/01/w out/01/e
 
-curl -s -o tmp/alabama.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/alabama.osm.pbf
+curl -Rs -o tmp/alabama.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/alabama.osm.pbf
 
 osmosis --rb tmp/alabama.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -95,5 +95,9 @@ osmosis \
     --bp completeWays=yes file=polys/01/01121-Talladega-County.txt  --wx out/01/e/01121-talladega-county.osm.bz2 \
     --bp completeWays=yes file=polys/01/01123-Tallapoosa-County.txt --wx out/01/e/01123-tallapoosa-county.osm.bz2 \
 
+touch -r tmp/alabama.osm.pbf out/01/*.osm.???
+
 ./skeletron-roads.sh tmp/alabama-roads.osm.pbf out/01 alabama
 ./skeletron-routes.sh tmp/alabama-routes.osm.bz2 out/01 alabama
+
+touch -r tmp/alabama.osm.pbf out/01/*.pgsql

@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/53/n out/53/s
 
-curl -s -o tmp/washington.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/washington.osm.pbf
+curl -Rs -o tmp/washington.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/washington.osm.pbf
 
 osmosis --rb tmp/washington.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -67,5 +67,9 @@ osmosis \
     --bp completeWays=yes file=polys/53/53075-Whitman-County.txt      --wx out/53/s/53075-whitman-county.osm.bz2 \
     --bp completeWays=yes file=polys/53/53077-Yakima-County.txt       --wx out/53/s/53077-yakima-county.osm.bz2 \
 
+touch -r tmp/washington.osm.pbf out/53/*.osm.???
+
 ./skeletron-roads.sh tmp/washington-roads.osm.pbf out/53 washington
 ./skeletron-routes.sh tmp/washington-routes.osm.bz2 out/53 washington
+
+touch -r tmp/washington.osm.pbf out/53/*.pgsql

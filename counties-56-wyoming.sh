@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/56/w out/56/wc out/56/ec out/56/e
 
-curl -s -o tmp/wyoming.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/wyoming.osm.pbf
+curl -Rs -o tmp/wyoming.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/wyoming.osm.pbf
 
 osmosis --rb tmp/wyoming.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -51,5 +51,9 @@ osmosis \
     --bp completeWays=yes file=polys/56/56031-Platte-County.txt      --wx out/56/e/56031-platte-county.osm.bz2 \
     --bp completeWays=yes file=polys/56/56045-Weston-County.txt      --wx out/56/e/56045-weston-county.osm.bz2 \
 
+touch -r tmp/wyoming.osm.pbf out/56/*.osm.???
+
 ./skeletron-roads.sh tmp/wyoming-roads.osm.pbf out/56 wyoming
 ./skeletron-routes.sh tmp/wyoming-routes.osm.bz2 out/56 wyoming
+
+touch -r tmp/wyoming.osm.pbf out/56/*.pgsql

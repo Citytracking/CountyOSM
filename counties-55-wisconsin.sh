@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/55/n out/55/c out/55/s
 
-curl -s -o tmp/wisconsin.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/wisconsin.osm.pbf
+curl -Rs -o tmp/wisconsin.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/wisconsin.osm.pbf
 
 osmosis --rb tmp/wisconsin.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -100,5 +100,9 @@ osmosis \
     --bp completeWays=yes file=polys/55/55137-Waushara-County.txt    --wx out/55/s/55137-waushara-county.osm.bz2 \
     --bp completeWays=yes file=polys/55/55139-Winnebago-County.txt   --wx out/55/s/55139-winnebago-county.osm.bz2 \
 
+touch -r tmp/wisconsin.osm.pbf out/55/*.osm.???
+
 ./skeletron-roads.sh tmp/wisconsin-roads.osm.pbf out/55 wisconsin
 ./skeletron-routes.sh tmp/wisconsin-routes.osm.bz2 out/55 wisconsin
+
+touch -r tmp/wisconsin.osm.pbf out/55/*.pgsql

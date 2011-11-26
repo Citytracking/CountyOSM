@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/04/w out/04/c out/04/e
 
-curl -s -o tmp/arizona.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/arizona.osm.pbf
+curl -Rs -o tmp/arizona.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/arizona.osm.pbf
 
 osmosis --rb tmp/arizona.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -43,5 +43,9 @@ osmosis \
     --bp completeWays=yes file=polys/04/04011-Greenlee-County.txt   --wx out/04/e/04011-greenlee-county.osm.bz2 \
     --bp completeWays=yes file=polys/04/04017-Navajo-County.txt     --wx out/04/e/04017-navajo-county.osm.bz2 \
 
+touch -r tmp/arizona.osm.pbf out/04/*.osm.???
+
 ./skeletron-roads.sh tmp/arizona-roads.osm.pbf out/04 arizona
 ./skeletron-routes.sh tmp/arizona-routes.osm.bz2 out/04 arizona
+
+touch -r tmp/arizona.osm.pbf out/04/*.pgsql

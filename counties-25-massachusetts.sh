@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/25/m out/25/i
 
-curl -s -o tmp/massachusetts.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/massachusetts.osm.pbf
+curl -Rs -o tmp/massachusetts.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/massachusetts.osm.pbf
 
 osmosis --rb tmp/massachusetts.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -42,5 +42,9 @@ osmosis \
     --bp completeWays=yes file=polys/25/25007-Dukes-County.txt      --wx out/25/i/25007-dukes-county.osm.bz2 \
     --bp completeWays=yes file=polys/25/25019-Nantucket-County.txt  --wx out/25/i/25019-nantucket-county.osm.bz2 \
 
+touch -r tmp/massachusetts.osm.pbf out/25/*.osm.???
+
 ./skeletron-roads.sh tmp/massachusetts-roads.osm.pbf out/25 massachusetts
 ./skeletron-routes.sh tmp/massachusetts-routes.osm.bz2 out/25 massachusetts
+
+touch -r tmp/massachusetts.osm.pbf out/25/*.pgsql

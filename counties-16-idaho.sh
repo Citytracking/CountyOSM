@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/16/w out/16/c out/16/e
 
-curl -s -o tmp/idaho.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/idaho.osm.pbf
+curl -Rs -o tmp/idaho.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/idaho.osm.pbf
 
 osmosis --rb tmp/idaho.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -72,5 +72,9 @@ osmosis \
     --bp completeWays=yes file=polys/16/16077-Power-County.txt      --wx out/16/e/16077-power-county.osm.bz2 \
     --bp completeWays=yes file=polys/16/16081-Teton-County.txt      --wx out/16/e/16081-teton-county.osm.bz2 \
 
+touch -r tmp/idaho.osm.pbf out/16/*.osm.???
+
 ./skeletron-roads.sh tmp/idaho-roads.osm.pbf out/16 idaho
 ./skeletron-routes.sh tmp/idaho-routes.osm.bz2 out/16 idaho
+
+touch -r tmp/idaho.osm.pbf out/16/*.pgsql

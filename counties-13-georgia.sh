@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/13/w out/13/e
 
-curl -s -o tmp/georgia.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/georgia.osm.pbf
+curl -Rs -o tmp/georgia.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/georgia.osm.pbf
 
 osmosis --rb tmp/georgia.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -187,5 +187,9 @@ osmosis \
     --bp completeWays=yes file=polys/13/13317-Wilkes-County.txt        --wx out/13/e/13317-wilkes-county.osm.bz2 \
     --bp completeWays=yes file=polys/13/13319-Wilkinson-County.txt     --wx out/13/e/13319-wilkinson-county.osm.bz2 \
 
+touch -r tmp/georgia.osm.pbf out/13/*.osm.???
+
 ./skeletron-roads.sh tmp/georgia-roads.osm.pbf out/13 georgia
 ./skeletron-routes.sh tmp/georgia-routes.osm.bz2 out/13 georgia
+
+touch -r tmp/georgia.osm.pbf out/13/*.pgsql

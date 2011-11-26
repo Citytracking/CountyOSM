@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/24
 
-curl -s -o tmp/maryland.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/maryland.osm.pbf
+curl -Rs -o tmp/maryland.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/maryland.osm.pbf
 
 osmosis --rb tmp/maryland.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -52,5 +52,9 @@ osmosis \
     --bp completeWays=yes file=polys/24/24047-Worcester-County.txt      --wx out/24/24047-worcester-county.osm.bz2 \
     --bp completeWays=yes file=polys/24/24510-Baltimore-city.txt        --wx out/24/24510-baltimore-city.osm.bz2 \
 
+touch -r tmp/maryland.osm.pbf out/24/*.osm.???
+
 ./skeletron-roads.sh tmp/maryland-roads.osm.pbf out/24 maryland
 ./skeletron-routes.sh tmp/maryland-routes.osm.bz2 out/24 maryland
+
+touch -r tmp/maryland.osm.pbf out/24/*.pgsql

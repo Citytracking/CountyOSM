@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/40/n out/40/s
 
-curl -s -o tmp/oklahoma.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/oklahoma.osm.pbf
+curl -Rs -o tmp/oklahoma.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/oklahoma.osm.pbf
 
 osmosis --rb tmp/oklahoma.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -105,5 +105,9 @@ osmosis \
     --bp completeWays=yes file=polys/40/40141-Tillman-County.txt      --wx out/40/s/40141-tillman-county.osm.bz2 \
     --bp completeWays=yes file=polys/40/40149-Washita-County.txt      --wx out/40/s/40149-washita-county.osm.bz2 \
 
+touch -r tmp/oklahoma.osm.pbf out/40/*.osm.???
+
 ./skeletron-roads.sh tmp/oklahoma-roads.osm.pbf out/40 oklahoma
 ./skeletron-routes.sh tmp/oklahoma-routes.osm.bz2 out/40 oklahoma
+
+touch -r tmp/oklahoma.osm.pbf out/40/*.pgsql

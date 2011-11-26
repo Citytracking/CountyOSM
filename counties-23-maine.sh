@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/23/w out/23/e
 
-curl -s -o tmp/maine.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/maine.osm.pbf
+curl -Rs -o tmp/maine.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/maine.osm.pbf
 
 osmosis --rb tmp/maine.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -44,5 +44,9 @@ osmosis \
     --bp completeWays=yes file=polys/23/23027-Waldo-County.txt        --wx out/23/e/23027-waldo-county.osm.bz2 \
     --bp completeWays=yes file=polys/23/23029-Washington-County.txt   --wx out/23/e/23029-washington-county.osm.bz2 \
 
+touch -r tmp/maine.osm.pbf out/23/*.osm.???
+
 ./skeletron-roads.sh tmp/maine-roads.osm.pbf out/23 maine
 ./skeletron-routes.sh tmp/maine-routes.osm.bz2 out/23 maine
+
+touch -r tmp/maine.osm.pbf out/23/*.pgsql

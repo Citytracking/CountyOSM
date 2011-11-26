@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/49/n out/49/c out/49/s
 
-curl -s -o tmp/utah.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/utah.osm.pbf
+curl -Rs -o tmp/utah.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/utah.osm.pbf
 
 osmosis --rb tmp/utah.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -57,5 +57,9 @@ osmosis \
     --bp completeWays=yes file=polys/49/49053-Washington-County.txt --wx out/49/s/49053-washington-county.osm.bz2 \
     --bp completeWays=yes file=polys/49/49055-Wayne-County.txt      --wx out/49/s/49055-wayne-county.osm.bz2 \
 
+touch -r tmp/utah.osm.pbf out/49/*.osm.???
+
 ./skeletron-roads.sh tmp/utah-roads.osm.pbf out/49 utah
 ./skeletron-routes.sh tmp/utah-routes.osm.bz2 out/49 utah
+
+touch -r tmp/utah.osm.pbf out/49/*.pgsql

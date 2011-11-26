@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/38/n out/38/s
 
-curl -s -o tmp/north-dakota.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/north-dakota.osm.pbf
+curl -Rs -o tmp/north-dakota.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/north-dakota.osm.pbf
 
 osmosis --rb tmp/north-dakota.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -81,5 +81,9 @@ osmosis \
     --bp completeWays=yes file=polys/38/38089-Stark-County.txt         --wx out/38/s/38089-stark-county.osm.bz2 \
     --bp completeWays=yes file=polys/38/38093-Stutsman-County.txt      --wx out/38/s/38093-stutsman-county.osm.bz2 \
 
+touch -r tmp/north-dakota.osm.pbf out/38/*.osm.???
+
 ./skeletron-roads.sh tmp/north-dakota-roads.osm.pbf out/38 north-dakota
 ./skeletron-routes.sh tmp/north-dakota-routes.osm.bz2 out/38 north-dakota
+
+touch -r tmp/north-dakota.osm.pbf out/38/*.pgsql

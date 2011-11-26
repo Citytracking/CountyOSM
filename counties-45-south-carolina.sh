@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/45/n out/45/s
 
-curl -s -o tmp/south-carolina.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/south-carolina.osm.pbf
+curl -Rs -o tmp/south-carolina.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/south-carolina.osm.pbf
 
 osmosis --rb tmp/south-carolina.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -74,5 +74,9 @@ osmosis \
     --bp completeWays=yes file=polys/45/45075-Orangeburg-County.txt   --wx out/45/s/45075-orangeburg-county.osm.bz2 \
     --bp completeWays=yes file=polys/45/45089-Williamsburg-County.txt --wx out/45/s/45089-williamsburg-county.osm.bz2 \
 
+touch -r tmp/south-carolina.osm.pbf out/45/*.osm.???
+
 ./skeletron-roads.sh tmp/south-carolina-roads.osm.pbf out/45 south-carolina
 ./skeletron-routes.sh tmp/south-carolina-routes.osm.bz2 out/45 south-carolina
+
+touch -r tmp/south-carolina.osm.pbf out/45/*.pgsql

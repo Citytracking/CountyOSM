@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/27/n out/27/c out/27/s
 
-curl -s -o tmp/minnesota.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/minnesota.osm.pbf
+curl -Rs -o tmp/minnesota.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/minnesota.osm.pbf
 
 osmosis --rb tmp/minnesota.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -115,5 +115,9 @@ osmosis \
     --bp completeWays=yes file=polys/27/27171-Wright-County.txt            --wx out/27/s/27171-wright-county.osm.bz2 \
     --bp completeWays=yes file=polys/27/27173-Yellow-Medicine-County.txt   --wx out/27/s/27173-yellow-medicine-county.osm.bz2 \
 
+touch -r tmp/minnesota.osm.pbf out/27/*.osm.???
+
 ./skeletron-roads.sh tmp/minnesota-roads.osm.pbf out/27 minnesota
 ./skeletron-routes.sh tmp/minnesota-routes.osm.bz2 out/27 minnesota
+
+touch -r tmp/minnesota.osm.pbf out/27/*.pgsql

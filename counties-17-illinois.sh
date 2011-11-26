@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/17/w out/17/e
 
-curl -s -o tmp/illinois.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/illinois.osm.pbf
+curl -Rs -o tmp/illinois.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/illinois.osm.pbf
 
 osmosis --rb tmp/illinois.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -130,5 +130,9 @@ osmosis \
     --bp completeWays=yes file=polys/17/17197-Will-County.txt        --wx out/17/e/17197-will-county.osm.bz2 \
     --bp completeWays=yes file=polys/17/17199-Williamson-County.txt  --wx out/17/e/17199-williamson-county.osm.bz2 \
 
+touch -r tmp/illinois.osm.pbf out/17/*.osm.???
+
 ./skeletron-roads.sh tmp/illinois-roads.osm.pbf out/17 illinois
 ./skeletron-routes.sh tmp/illinois-routes.osm.bz2 out/17 illinois
+
+touch -r tmp/illinois.osm.pbf out/17/*.pgsql

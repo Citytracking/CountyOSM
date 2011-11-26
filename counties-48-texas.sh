@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/48/n out/48/nc out/48/c out/48/sc out/48/s
 
-curl -s -o tmp/texas.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/texas.osm.pbf
+curl -Rs -o tmp/texas.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/texas.osm.pbf
 
 osmosis --rb tmp/texas.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -282,5 +282,9 @@ osmosis \
     --bp completeWays=yes file=polys/48/48489-Willacy-County.txt       --wx out/48/s/48489-willacy-county.osm.bz2 \
     --bp completeWays=yes file=polys/48/48505-Zapata-County.txt        --wx out/48/s/48505-zapata-county.osm.bz2 \
 
+touch -r tmp/texas.osm.pbf out/48/*.osm.???
+
 ./skeletron-roads.sh tmp/texas-roads.osm.pbf out/48 texas
 ./skeletron-routes.sh tmp/texas-routes.osm.bz2 out/48 texas
+
+touch -r tmp/texas.osm.pbf out/48/*.pgsql

@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/18/w out/18/e
 
-curl -s -o tmp/indiana.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/indiana.osm.pbf
+curl -Rs -o tmp/indiana.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/indiana.osm.pbf
 
 osmosis --rb tmp/indiana.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -120,5 +120,9 @@ osmosis \
     --bp completeWays=yes file=polys/18/18179-Wells-County.txt       --wx out/18/e/18179-wells-county.osm.bz2 \
     --bp completeWays=yes file=polys/18/18183-Whitley-County.txt     --wx out/18/e/18183-whitley-county.osm.bz2 \
 
+touch -r tmp/indiana.osm.pbf out/18/*.osm.???
+
 ./skeletron-roads.sh tmp/indiana-roads.osm.pbf out/18 indiana
 ./skeletron-routes.sh tmp/indiana-routes.osm.bz2 out/18 indiana
+
+touch -r tmp/indiana.osm.pbf out/18/*.pgsql

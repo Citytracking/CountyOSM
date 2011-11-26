@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/08/n out/08/c out/08/s
 
-curl -s -o tmp/colorado.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/colorado.osm.pbf
+curl -Rs -o tmp/colorado.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/colorado.osm.pbf
 
 osmosis --rb tmp/colorado.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -92,5 +92,9 @@ osmosis \
     --bp completeWays=yes file=polys/08/08111-San-Juan-County.txt    --wx out/08/s/08111-san-juan-county.osm.bz2 \
     --bp completeWays=yes file=polys/08/08113-San-Miguel-County.txt  --wx out/08/s/08113-san-miguel-county.osm.bz2 \
 
+touch -r tmp/colorado.osm.pbf out/08/*.osm.???
+
 ./skeletron-roads.sh tmp/colorado-roads.osm.pbf out/08 colorado
 ./skeletron-routes.sh tmp/colorado-routes.osm.bz2 out/08 colorado
+
+touch -r tmp/colorado.osm.pbf out/08/*.pgsql

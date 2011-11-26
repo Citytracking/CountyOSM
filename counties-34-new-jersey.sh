@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/34
 
-curl -s -o tmp/new-jersey.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/new-jersey.osm.pbf
+curl -Rs -o tmp/new-jersey.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/new-jersey.osm.pbf
 
 osmosis --rb tmp/new-jersey.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -49,5 +49,9 @@ osmosis \
     --bp completeWays=yes file=polys/34/34039-Union-County.txt      --wx out/34/34039-union-county.osm.bz2 \
     --bp completeWays=yes file=polys/34/34041-Warren-County.txt     --wx out/34/34041-warren-county.osm.bz2 \
 
+touch -r tmp/new-jersey.osm.pbf out/34/*.osm.???
+
 ./skeletron-roads.sh tmp/new-jersey-roads.osm.pbf out/34 new-jersey
 ./skeletron-routes.sh tmp/new-jersey-routes.osm.bz2 out/34 new-jersey
+
+touch -r tmp/new-jersey.osm.pbf out/34/*.pgsql

@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/44
 
-curl -s -o tmp/rhode-island.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/rhode-island.osm.pbf
+curl -Rs -o tmp/rhode-island.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/rhode-island.osm.pbf
 
 osmosis --rb tmp/rhode-island.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -33,5 +33,9 @@ osmosis \
     --bp completeWays=yes file=polys/44/44007-Providence-County.txt    --wx out/44/44007-providence-roads.osm.bz2 \
     --bp completeWays=yes file=polys/44/44009-Washington-County.txt    --wx out/44/44009-washington-roads.osm.bz2 \
 
+touch -r tmp/rhode-island.osm.pbf out/44/*.osm.???
+
 ./skeletron-roads.sh tmp/rhode-island-roads.osm.pbf out/44 rhode-island
 ./skeletron-routes.sh tmp/rhode-island-routes.osm.bz2 out/44 rhode-island
+
+touch -r tmp/rhode-island.osm.pbf out/44/*.pgsql

@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/26/n out/26/c out/26/s
 
-curl -s -o tmp/michigan.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/michigan.osm.pbf
+curl -Rs -o tmp/michigan.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/michigan.osm.pbf
 
 osmosis --rb tmp/michigan.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -111,5 +111,9 @@ osmosis \
     --bp completeWays=yes file=polys/26/26161-Washtenaw-County.txt    --wx out/26/s/26161-washtenaw-county.osm.bz2 \
     --bp completeWays=yes file=polys/26/26163-Wayne-County.txt        --wx out/26/s/26163-wayne-county.osm.bz2 \
 
+touch -r tmp/michigan.osm.pbf out/26/*.osm.???
+
 ./skeletron-roads.sh tmp/michigan-roads.osm.pbf out/26 michigan
 ./skeletron-routes.sh tmp/michigan-routes.osm.bz2 out/26 michigan
+
+touch -r tmp/michigan.osm.pbf out/26/*.pgsql

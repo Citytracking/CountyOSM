@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/21/n out/21/s
 
-curl -s -o tmp/kentucky.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/kentucky.osm.pbf
+curl -Rs -o tmp/kentucky.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/kentucky.osm.pbf
 
 osmosis --rb tmp/kentucky.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -148,5 +148,9 @@ osmosis \
     --bp completeWays=yes file=polys/21/21235-Whitley-County.txt      --wx out/21/s/21235-whitley-county.osm.bz2 \
     --bp completeWays=yes file=polys/21/21237-Wolfe-County.txt        --wx out/21/s/21237-wolfe-county.osm.bz2 \
 
+touch -r tmp/kentucky.osm.pbf out/21/*.osm.???
+
 ./skeletron-roads.sh tmp/kentucky-roads.osm.pbf out/21 kentucky
 ./skeletron-routes.sh tmp/kentucky-routes.osm.bz2 out/21 kentucky
+
+touch -r tmp/kentucky.osm.pbf out/21/*.pgsql

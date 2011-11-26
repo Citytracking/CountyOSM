@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/46/n out/46/s
 
-curl -s -o tmp/south-dakota.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/south-dakota.osm.pbf
+curl -Rs -o tmp/south-dakota.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/south-dakota.osm.pbf
 
 osmosis --rb tmp/south-dakota.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -94,5 +94,9 @@ osmosis \
     --bp completeWays=yes file=polys/46/46127-Union-County.txt       --wx out/46/s/46127-union-county.osm.bz2 \
     --bp completeWays=yes file=polys/46/46135-Yankton-County.txt     --wx out/46/s/46135-yankton-county.osm.bz2 \
 
+touch -r tmp/south-dakota.osm.pbf out/46/*.osm.???
+
 ./skeletron-roads.sh tmp/south-dakota-roads.osm.pbf out/46 south-dakota
 ./skeletron-routes.sh tmp/south-dakota-routes.osm.bz2 out/46 south-dakota
+
+touch -r tmp/south-dakota.osm.pbf out/46/*.pgsql

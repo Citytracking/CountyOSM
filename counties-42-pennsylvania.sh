@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/42/n out/42/s
 
-curl -s -o tmp/pennsylvania.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/pennsylvania.osm.pbf
+curl -Rs -o tmp/pennsylvania.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/pennsylvania.osm.pbf
 
 osmosis --rb tmp/pennsylvania.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -95,5 +95,9 @@ osmosis \
     --bp completeWays=yes file=polys/42/42129-Westmoreland-County.txt   --wx out/42/s/42129-westmoreland-county.osm.bz2 \
     --bp completeWays=yes file=polys/42/42133-York-County.txt           --wx out/42/s/42133-york-county.osm.bz2 \
 
+touch -r tmp/pennsylvania.osm.pbf out/42/*.osm.???
+
 ./skeletron-roads.sh tmp/pennsylvania-roads.osm.pbf out/42 pennsylvania
 ./skeletron-routes.sh tmp/pennsylvania-routes.osm.bz2 out/42 pennsylvania
+
+touch -r tmp/pennsylvania.osm.pbf out/42/*.pgsql

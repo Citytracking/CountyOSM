@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/41/n out/41/s
 
-curl -s -o tmp/oregon.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/oregon.osm.pbf
+curl -Rs -o tmp/oregon.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/oregon.osm.pbf
 
 osmosis --rb tmp/oregon.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -64,5 +64,9 @@ osmosis \
     --bp completeWays=yes file=polys/41/41039-Lane-County.txt       --wx out/41/s/41039-lane-county.osm.bz2 \
     --bp completeWays=yes file=polys/41/41045-Malheur-County.txt    --wx out/41/s/41045-malheur-county.osm.bz2 \
 
+touch -r tmp/oregon.osm.pbf out/41/*.osm.???
+
 ./skeletron-roads.sh tmp/oregon-roads.osm.pbf out/41 oregon
 ./skeletron-routes.sh tmp/oregon-routes.osm.bz2 out/41 oregon
+
+touch -r tmp/oregon.osm.pbf out/41/*.pgsql

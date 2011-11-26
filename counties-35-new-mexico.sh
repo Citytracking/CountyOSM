@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/35/w out/35/c out/35/e
 
-curl -s -o tmp/new-mexico.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/new-mexico.osm.pbf
+curl -Rs -o tmp/new-mexico.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/new-mexico.osm.pbf
 
 osmosis --rb tmp/new-mexico.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -61,5 +61,9 @@ osmosis \
     --bp completeWays=yes file=polys/35/35047-San-Miguel-County.txt --wx out/35/e/35047-san-miguel-county.osm.bz2 \
     --bp completeWays=yes file=polys/35/35059-Union-County.txt      --wx out/35/e/35059-union-county.osm.bz2 \
 
+touch -r tmp/new-mexico.osm.pbf out/35/*.osm.???
+
 ./skeletron-roads.sh tmp/new-mexico-roads.osm.pbf out/35 new-mexico
 ./skeletron-routes.sh tmp/new-mexico-routes.osm.bz2 out/35 new-mexico
+
+touch -r tmp/new-mexico.osm.pbf out/35/*.pgsql

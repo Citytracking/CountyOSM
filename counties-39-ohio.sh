@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/39/n out/39/s
 
-curl -s -o tmp/ohio.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/ohio.osm.pbf
+curl -Rs -o tmp/ohio.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/ohio.osm.pbf
 
 osmosis --rb tmp/ohio.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -116,5 +116,9 @@ osmosis \
     --bp completeWays=yes file=polys/39/39165-Warren-County.txt     --wx out/39/s/39165-warren-county.osm.bz2 \
     --bp completeWays=yes file=polys/39/39167-Washington-County.txt --wx out/39/s/39167-washington-county.osm.bz2 \
 
+touch -r tmp/ohio.osm.pbf out/39/*.osm.???
+
 ./skeletron-roads.sh tmp/ohio-roads.osm.pbf out/39 ohio
 ./skeletron-routes.sh tmp/ohio-routes.osm.bz2 out/39 ohio
+
+touch -r tmp/ohio.osm.pbf out/39/*.pgsql

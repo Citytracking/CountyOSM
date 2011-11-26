@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/50
 
-curl -s -o tmp/vermont.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/vermont.osm.pbf
+curl -Rs -o tmp/vermont.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/vermont.osm.pbf
 
 osmosis --rb tmp/vermont.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -42,5 +42,9 @@ osmosis \
     --bp completeWays=yes file=polys/50/50025-Windham-County.txt    --wx out/50/50025-windham-county.osm.bz2 \
     --bp completeWays=yes file=polys/50/50027-Windsor-County.txt    --wx out/50/50027-windsor-county.osm.bz2 \
 
+touch -r tmp/vermont.osm.pbf out/50/*.osm.???
+
 ./skeletron-roads.sh tmp/vermont-roads.osm.pbf out/50 vermont
 ./skeletron-routes.sh tmp/vermont-routes.osm.bz2 out/50 vermont
+
+touch -r tmp/vermont.osm.pbf out/50/*.pgsql

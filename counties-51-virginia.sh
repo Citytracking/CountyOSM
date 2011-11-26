@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/51/n out/51/s
 
-curl -s -o tmp/virginia.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/virginia.osm.pbf
+curl -Rs -o tmp/virginia.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/virginia.osm.pbf
 
 osmosis --rb tmp/virginia.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -162,5 +162,9 @@ osmosis \
     --bp completeWays=yes file=polys/51/51810-Virginia-Beach-city.txt   --wx out/51/s/51810-virginia-beach-city.osm.bz2 \
     --bp completeWays=yes file=polys/51/51830-Williamsburg-city.txt     --wx out/51/s/51830-williamsburg-city.osm.bz2 \
 
+touch -r tmp/virginia.osm.pbf out/51/*.osm.???
+
 ./skeletron-roads.sh tmp/virginia-roads.osm.pbf out/51 virginia
 ./skeletron-routes.sh tmp/virginia-routes.osm.bz2 out/51 virginia
+
+touch -r tmp/virginia.osm.pbf out/51/*.pgsql

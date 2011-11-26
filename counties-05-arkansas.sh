@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/05/n out/05/s
 
-curl -s -o tmp/arkansas.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/arkansas.osm.pbf
+curl -Rs -o tmp/arkansas.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/arkansas.osm.pbf
 
 osmosis --rb tmp/arkansas.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -103,5 +103,9 @@ osmosis \
     --bp completeWays=yes file=polys/05/05133-Sevier-County.txt       --wx out/05/s/05133-sevier-county.osm.bz2 \
     --bp completeWays=yes file=polys/05/05139-Union-County.txt        --wx out/05/s/05139-union-county.osm.bz2 \
 
+touch -r tmp/arkansas.osm.pbf out/05/*.osm.???
+
 ./skeletron-roads.sh tmp/arkansas-roads.osm.pbf out/05 arkansas
 ./skeletron-routes.sh tmp/arkansas-routes.osm.bz2 out/05 arkansas
+
+touch -r tmp/arkansas.osm.pbf out/05/*.pgsql

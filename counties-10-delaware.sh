@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/10
 
-curl -s -o tmp/delaware.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/delaware.osm.pbf
+curl -Rs -o tmp/delaware.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/delaware.osm.pbf
 
 osmosis --rb tmp/delaware.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -31,5 +31,9 @@ osmosis \
     --bp completeWays=yes file=polys/10/10003-New-Castle-County.txt    --wx out/10/10003-new-castle-roads.osm.bz2 \
     --bp completeWays=yes file=polys/10/10005-Sussex-County.txt        --wx out/10/10005-sussex-roads.osm.bz2 \
 
+touch -r tmp/delaware.osm.pbf out/10/*.osm.???
+
 ./skeletron-roads.sh tmp/delaware-roads.osm.pbf out/10 delaware
 ./skeletron-routes.sh tmp/delaware-routes.osm.bz2 out/10 delaware
+
+touch -r tmp/delaware.osm.pbf out/10/*.pgsql

@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/29/w out/29/c out/29/e
 
-curl -s -o tmp/missouri.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/missouri.osm.pbf
+curl -Rs -o tmp/missouri.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/missouri.osm.pbf
 
 osmosis --rb tmp/missouri.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -143,5 +143,9 @@ osmosis \
     --bp completeWays=yes file=polys/29/29221-Washington-County.txt     --wx out/29/e/29221-washington-county.osm.bz2 \
     --bp completeWays=yes file=polys/29/29223-Wayne-County.txt          --wx out/29/e/29223-wayne-county.osm.bz2 \
 
+touch -r tmp/missouri.osm.pbf out/29/*.osm.???
+
 ./skeletron-roads.sh tmp/missouri-roads.osm.pbf out/29 missouri
 ./skeletron-routes.sh tmp/missouri-routes.osm.bz2 out/29 missouri
+
+touch -r tmp/missouri.osm.pbf out/29/*.pgsql

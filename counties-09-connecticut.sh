@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/09
 
-curl -s -o tmp/connecticut.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/connecticut.osm.pbf
+curl -Rs -o tmp/connecticut.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/connecticut.osm.pbf
 
 osmosis --rb tmp/connecticut.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -36,5 +36,9 @@ osmosis \
     --bp completeWays=yes file=polys/09/09013-Tolland-County.txt    --wx out/09/09013-tolland-county.osm.bz2 \
     --bp completeWays=yes file=polys/09/09015-Windham-County.txt    --wx out/09/09015-windham-county.osm.bz2 \
 
+touch -r tmp/connecticut.osm.pbf out/09/*.osm.???
+
 ./skeletron-roads.sh tmp/connecticut-roads.osm.pbf out/09 connecticut
 ./skeletron-routes.sh tmp/connecticut-routes.osm.bz2 out/09 connecticut
+
+touch -r tmp/connecticut.osm.pbf out/09/*.pgsql

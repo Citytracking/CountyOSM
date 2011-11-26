@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/12/n out/12/w out/12/e
 
-curl -s -o tmp/florida.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/florida.osm.pbf
+curl -Rs -o tmp/florida.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/florida.osm.pbf
 
 osmosis --rb tmp/florida.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -95,5 +95,9 @@ osmosis \
     --bp completeWays=yes file=polys/12/12117-Seminole-County.txt     --wx out/12/e/12117-seminole-county.osm.bz2 \
     --bp completeWays=yes file=polys/12/12127-Volusia-County.txt      --wx out/12/e/12127-volusia-county.osm.bz2 \
 
+touch -r tmp/florida.osm.pbf out/12/*.osm.???
+
 ./skeletron-roads.sh tmp/florida-roads.osm.pbf out/12 florida
 ./skeletron-routes.sh tmp/florida-routes.osm.bz2 out/12 florida
+
+touch -r tmp/florida.osm.pbf out/12/*.pgsql

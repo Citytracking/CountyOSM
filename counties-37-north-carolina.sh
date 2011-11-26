@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/37
 
-curl -s -o tmp/north-carolina.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/north-carolina.osm.pbf
+curl -Rs -o tmp/north-carolina.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/north-carolina.osm.pbf
 
 osmosis --rb tmp/north-carolina.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -128,5 +128,9 @@ osmosis \
     --bp completeWays=yes file=polys/37/37197-Yadkin-County.txt       --wx out/37/37197-yadkin-county.osm.bz2 \
     --bp completeWays=yes file=polys/37/37199-Yancey-County.txt       --wx out/37/37199-yancey-county.osm.bz2 \
 
+touch -r tmp/north-carolina.osm.pbf out/37/*.osm.???
+
 ./skeletron-roads.sh tmp/north-carolina-roads.osm.pbf out/37 north-carolina
 ./skeletron-routes.sh tmp/north-carolina-routes.osm.bz2 out/37 north-carolina
+
+touch -r tmp/north-carolina.osm.pbf out/37/*.pgsql

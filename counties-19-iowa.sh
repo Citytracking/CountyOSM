@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/19/n out/19/s
 
-curl -s -o tmp/iowa.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/iowa.osm.pbf
+curl -Rs -o tmp/iowa.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/iowa.osm.pbf
 
 osmosis --rb tmp/iowa.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
@@ -127,5 +127,9 @@ osmosis \
     --bp completeWays=yes file=polys/19/19183-Washington-County.txt    --wx out/19/s/19183-washington-county.osm.bz2 \
     --bp completeWays=yes file=polys/19/19185-Wayne-County.txt         --wx out/19/s/19185-wayne-county.osm.bz2 \
 
+touch -r tmp/iowa.osm.pbf out/19/*.osm.???
+
 ./skeletron-roads.sh tmp/iowa-roads.osm.pbf out/19 iowa
 ./skeletron-routes.sh tmp/iowa-routes.osm.bz2 out/19 iowa
+
+touch -r tmp/iowa.osm.pbf out/19/*.pgsql
