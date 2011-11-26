@@ -43,7 +43,7 @@ osmosis \
     --bp completeWays=yes file=polys/04/04011-Greenlee-County.txt   --wx out/04/e/04011-greenlee-county.osm.bz2 \
     --bp completeWays=yes file=polys/04/04017-Navajo-County.txt     --wx out/04/e/04017-navajo-county.osm.bz2 \
 
-touch -r tmp/arizona.osm.pbf out/04/*.osm.???
+touch -r tmp/arizona.osm.pbf out/04/*/*.osm.???
 
 ./skeletron-roads.sh tmp/arizona-roads.osm.pbf out/04 arizona
 ./skeletron-routes.sh tmp/arizona-routes.osm.bz2 out/04 arizona

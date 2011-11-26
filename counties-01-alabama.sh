@@ -95,7 +95,7 @@ osmosis \
     --bp completeWays=yes file=polys/01/01121-Talladega-County.txt  --wx out/01/e/01121-talladega-county.osm.bz2 \
     --bp completeWays=yes file=polys/01/01123-Tallapoosa-County.txt --wx out/01/e/01123-tallapoosa-county.osm.bz2 \
 
-touch -r tmp/alabama.osm.pbf out/01/*.osm.???
+touch -r tmp/alabama.osm.pbf out/01/*/*.osm.???
 
 ./skeletron-roads.sh tmp/alabama-roads.osm.pbf out/01 alabama
 ./skeletron-routes.sh tmp/alabama-routes.osm.bz2 out/01 alabama

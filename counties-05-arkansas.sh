@@ -103,7 +103,7 @@ osmosis \
     --bp completeWays=yes file=polys/05/05133-Sevier-County.txt       --wx out/05/s/05133-sevier-county.osm.bz2 \
     --bp completeWays=yes file=polys/05/05139-Union-County.txt        --wx out/05/s/05139-union-county.osm.bz2 \
 
-touch -r tmp/arkansas.osm.pbf out/05/*.osm.???
+touch -r tmp/arkansas.osm.pbf out/05/*/*.osm.???
 
 ./skeletron-roads.sh tmp/arkansas-roads.osm.pbf out/05 arkansas
 ./skeletron-routes.sh tmp/arkansas-routes.osm.bz2 out/05 arkansas

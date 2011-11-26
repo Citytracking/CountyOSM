@@ -86,7 +86,7 @@ osmosis \
     --bp completeWays=yes file=polys/06/06065-Riverside-County.txt         --wx out/06/vi/06065-riverside-county.osm.bz2 \
     --bp completeWays=yes file=polys/06/06073-San-Diego-County.txt         --wx out/06/vi/06073-san-diego-county.osm.bz2 \
 
-touch -r tmp/california.osm.pbf out/06/*.osm.???
+touch -r tmp/california.osm.pbf out/06/*/*.osm.???
 
 ./skeletron-roads.sh tmp/california-roads.osm.pbf out/06 california
 ./skeletron-routes.sh tmp/california-routes.osm.bz2 out/06 california
