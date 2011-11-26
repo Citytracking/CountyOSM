@@ -51,7 +51,7 @@ osmosis \
     --bp completeWays=yes file=polys/56/56031-Platte-County.txt      --wx out/56/e/56031-platte-county.osm.bz2 \
     --bp completeWays=yes file=polys/56/56045-Weston-County.txt      --wx out/56/e/56045-weston-county.osm.bz2 \
 
-touch -r tmp/wyoming.osm.pbf out/56/*.osm.???
+touch -r tmp/wyoming.osm.pbf out/56/*/*.osm.???
 
 ./skeletron-roads.sh tmp/wyoming-roads.osm.pbf out/56 wyoming
 ./skeletron-routes.sh tmp/wyoming-routes.osm.bz2 out/56 wyoming

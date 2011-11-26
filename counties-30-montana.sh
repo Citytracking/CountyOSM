@@ -84,7 +84,7 @@ osmosis \
     --bp completeWays=yes file=polys/30/30107-Wheatland-County.txt       --wx out/30/s/30107-wheatland-county.osm.bz2 \
     --bp completeWays=yes file=polys/30/30111-Yellowstone-County.txt     --wx out/30/s/30111-yellowstone-county.osm.bz2 \
 
-touch -r tmp/montana.osm.pbf out/30/*.osm.???
+touch -r tmp/montana.osm.pbf out/30/*/*.osm.???
 
 ./skeletron-roads.sh tmp/montana-roads.osm.pbf out/30 montana
 ./skeletron-routes.sh tmp/montana-routes.osm.bz2 out/30 montana

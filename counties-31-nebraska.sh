@@ -121,7 +121,7 @@ osmosis \
     --bp completeWays=yes file=polys/31/31181-Webster-County.txt      --wx out/31/s/31181-webster-county.osm.bz2 \
     --bp completeWays=yes file=polys/31/31185-York-County.txt         --wx out/31/s/31185-york-county.osm.bz2 \
 
-touch -r tmp/nebraska.osm.pbf out/31/*.osm.???
+touch -r tmp/nebraska.osm.pbf out/31/*/*.osm.???
 
 ./skeletron-roads.sh tmp/nebraska-roads.osm.pbf out/31 nebraska
 ./skeletron-routes.sh tmp/nebraska-routes.osm.bz2 out/31 nebraska

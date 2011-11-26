@@ -44,7 +44,7 @@ osmosis \
     --bp completeWays=yes file=polys/23/23027-Waldo-County.txt        --wx out/23/e/23027-waldo-county.osm.bz2 \
     --bp completeWays=yes file=polys/23/23029-Washington-County.txt   --wx out/23/e/23029-washington-county.osm.bz2 \
 
-touch -r tmp/maine.osm.pbf out/23/*.osm.???
+touch -r tmp/maine.osm.pbf out/23/*/*.osm.???
 
 ./skeletron-roads.sh tmp/maine-roads.osm.pbf out/23 maine
 ./skeletron-routes.sh tmp/maine-routes.osm.bz2 out/23 maine

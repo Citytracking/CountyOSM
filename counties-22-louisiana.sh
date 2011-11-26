@@ -92,7 +92,7 @@ osmosis \
     --bp completeWays=yes file=polys/22/22121-West-Baton-Rouge-Parish.txt     --wx out/22/s/22121-west-baton-rouge-parish.osm.bz2 \
     --bp completeWays=yes file=polys/22/22125-West-Feliciana-Parish.txt       --wx out/22/s/22125-west-feliciana-parish.osm.bz2 \
 
-touch -r tmp/louisiana.osm.pbf out/22/*.osm.???
+touch -r tmp/louisiana.osm.pbf out/22/*/*.osm.???
 
 ./skeletron-roads.sh tmp/louisiana-roads.osm.pbf out/22 louisiana
 ./skeletron-routes.sh tmp/louisiana-routes.osm.bz2 out/22 louisiana

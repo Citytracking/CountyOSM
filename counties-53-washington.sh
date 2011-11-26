@@ -67,7 +67,7 @@ osmosis \
     --bp completeWays=yes file=polys/53/53075-Whitman-County.txt      --wx out/53/s/53075-whitman-county.osm.bz2 \
     --bp completeWays=yes file=polys/53/53077-Yakima-County.txt       --wx out/53/s/53077-yakima-county.osm.bz2 \
 
-touch -r tmp/washington.osm.pbf out/53/*.osm.???
+touch -r tmp/washington.osm.pbf out/53/*/*.osm.???
 
 ./skeletron-roads.sh tmp/washington-roads.osm.pbf out/53 washington
 ./skeletron-routes.sh tmp/washington-routes.osm.bz2 out/53 washington

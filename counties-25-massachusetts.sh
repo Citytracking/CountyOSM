@@ -42,7 +42,7 @@ osmosis \
     --bp completeWays=yes file=polys/25/25007-Dukes-County.txt      --wx out/25/i/25007-dukes-county.osm.bz2 \
     --bp completeWays=yes file=polys/25/25019-Nantucket-County.txt  --wx out/25/i/25019-nantucket-county.osm.bz2 \
 
-touch -r tmp/massachusetts.osm.pbf out/25/*.osm.???
+touch -r tmp/massachusetts.osm.pbf out/25/*/*.osm.???
 
 ./skeletron-roads.sh tmp/massachusetts-roads.osm.pbf out/25 massachusetts
 ./skeletron-routes.sh tmp/massachusetts-routes.osm.bz2 out/25 massachusetts

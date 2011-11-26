@@ -110,7 +110,7 @@ osmosis \
     --bp completeWays=yes file=polys/28/28155-Webster-County.txt         --wx out/28/e/28155-webster-county.osm.bz2 \
     --bp completeWays=yes file=polys/28/28159-Winston-County.txt         --wx out/28/e/28159-winston-county.osm.bz2 \
 
-touch -r tmp/mississippi.osm.pbf out/28/*.osm.???
+touch -r tmp/mississippi.osm.pbf out/28/*/*.osm.???
 
 ./skeletron-roads.sh tmp/mississippi-roads.osm.pbf out/28 mississippi
 ./skeletron-routes.sh tmp/mississippi-routes.osm.bz2 out/28 mississippi

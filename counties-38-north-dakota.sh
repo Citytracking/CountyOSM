@@ -81,7 +81,7 @@ osmosis \
     --bp completeWays=yes file=polys/38/38089-Stark-County.txt         --wx out/38/s/38089-stark-county.osm.bz2 \
     --bp completeWays=yes file=polys/38/38093-Stutsman-County.txt      --wx out/38/s/38093-stutsman-county.osm.bz2 \
 
-touch -r tmp/north-dakota.osm.pbf out/38/*.osm.???
+touch -r tmp/north-dakota.osm.pbf out/38/*/*.osm.???
 
 ./skeletron-roads.sh tmp/north-dakota-roads.osm.pbf out/38 north-dakota
 ./skeletron-routes.sh tmp/north-dakota-routes.osm.bz2 out/38 north-dakota

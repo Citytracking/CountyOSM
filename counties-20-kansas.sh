@@ -133,7 +133,7 @@ osmosis \
     --bp completeWays=yes file=polys/20/20205-Wilson-County.txt       --wx out/20/s/20205-wilson-county.osm.bz2 \
     --bp completeWays=yes file=polys/20/20207-Woodson-County.txt      --wx out/20/s/20207-woodson-county.osm.bz2 \
 
-touch -r tmp/kansas.osm.pbf out/20/*.osm.???
+touch -r tmp/kansas.osm.pbf out/20/*/*.osm.???
 
 ./skeletron-roads.sh tmp/kansas-roads.osm.pbf out/20 kansas
 ./skeletron-routes.sh tmp/kansas-routes.osm.bz2 out/20 kansas

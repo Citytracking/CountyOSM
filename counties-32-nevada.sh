@@ -45,7 +45,7 @@ osmosis \
     --bp completeWays=yes file=polys/32/32017-Lincoln-County.txt    --wx out/32/e/32017-lincoln-county.osm.bz2 \
     --bp completeWays=yes file=polys/32/32033-White-Pine-County.txt --wx out/32/e/32033-white-pine-county.osm.bz2 \
 
-touch -r tmp/nevada.osm.pbf out/32/*.osm.???
+touch -r tmp/nevada.osm.pbf out/32/*/*.osm.???
 
 ./skeletron-roads.sh tmp/nevada-roads.osm.pbf out/32 nevada
 ./skeletron-routes.sh tmp/nevada-routes.osm.bz2 out/32 nevada

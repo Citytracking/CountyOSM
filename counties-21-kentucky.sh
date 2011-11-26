@@ -148,7 +148,7 @@ osmosis \
     --bp completeWays=yes file=polys/21/21235-Whitley-County.txt      --wx out/21/s/21235-whitley-county.osm.bz2 \
     --bp completeWays=yes file=polys/21/21237-Wolfe-County.txt        --wx out/21/s/21237-wolfe-county.osm.bz2 \
 
-touch -r tmp/kentucky.osm.pbf out/21/*.osm.???
+touch -r tmp/kentucky.osm.pbf out/21/*/*.osm.???
 
 ./skeletron-roads.sh tmp/kentucky-roads.osm.pbf out/21 kentucky
 ./skeletron-routes.sh tmp/kentucky-routes.osm.bz2 out/21 kentucky

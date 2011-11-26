@@ -94,7 +94,7 @@ osmosis \
     --bp completeWays=yes file=polys/46/46127-Union-County.txt       --wx out/46/s/46127-union-county.osm.bz2 \
     --bp completeWays=yes file=polys/46/46135-Yankton-County.txt     --wx out/46/s/46135-yankton-county.osm.bz2 \
 
-touch -r tmp/south-dakota.osm.pbf out/46/*.osm.???
+touch -r tmp/south-dakota.osm.pbf out/46/*/*.osm.???
 
 ./skeletron-roads.sh tmp/south-dakota-roads.osm.pbf out/46 south-dakota
 ./skeletron-routes.sh tmp/south-dakota-routes.osm.bz2 out/46 south-dakota

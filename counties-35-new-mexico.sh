@@ -61,7 +61,7 @@ osmosis \
     --bp completeWays=yes file=polys/35/35047-San-Miguel-County.txt --wx out/35/e/35047-san-miguel-county.osm.bz2 \
     --bp completeWays=yes file=polys/35/35059-Union-County.txt      --wx out/35/e/35059-union-county.osm.bz2 \
 
-touch -r tmp/new-mexico.osm.pbf out/35/*.osm.???
+touch -r tmp/new-mexico.osm.pbf out/35/*/*.osm.???
 
 ./skeletron-roads.sh tmp/new-mexico-roads.osm.pbf out/35 new-mexico
 ./skeletron-routes.sh tmp/new-mexico-routes.osm.bz2 out/35 new-mexico

@@ -92,7 +92,7 @@ osmosis \
     --bp completeWays=yes file=polys/08/08111-San-Juan-County.txt    --wx out/08/s/08111-san-juan-county.osm.bz2 \
     --bp completeWays=yes file=polys/08/08113-San-Miguel-County.txt  --wx out/08/s/08113-san-miguel-county.osm.bz2 \
 
-touch -r tmp/colorado.osm.pbf out/08/*.osm.???
+touch -r tmp/colorado.osm.pbf out/08/*/*.osm.???
 
 ./skeletron-roads.sh tmp/colorado-roads.osm.pbf out/08 colorado
 ./skeletron-routes.sh tmp/colorado-routes.osm.bz2 out/08 colorado

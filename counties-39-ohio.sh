@@ -116,7 +116,7 @@ osmosis \
     --bp completeWays=yes file=polys/39/39165-Warren-County.txt     --wx out/39/s/39165-warren-county.osm.bz2 \
     --bp completeWays=yes file=polys/39/39167-Washington-County.txt --wx out/39/s/39167-washington-county.osm.bz2 \
 
-touch -r tmp/ohio.osm.pbf out/39/*.osm.???
+touch -r tmp/ohio.osm.pbf out/39/*/*.osm.???
 
 ./skeletron-roads.sh tmp/ohio-roads.osm.pbf out/39 ohio
 ./skeletron-routes.sh tmp/ohio-routes.osm.bz2 out/39 ohio

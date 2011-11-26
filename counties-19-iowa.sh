@@ -127,7 +127,7 @@ osmosis \
     --bp completeWays=yes file=polys/19/19183-Washington-County.txt    --wx out/19/s/19183-washington-county.osm.bz2 \
     --bp completeWays=yes file=polys/19/19185-Wayne-County.txt         --wx out/19/s/19185-wayne-county.osm.bz2 \
 
-touch -r tmp/iowa.osm.pbf out/19/*.osm.???
+touch -r tmp/iowa.osm.pbf out/19/*/*.osm.???
 
 ./skeletron-roads.sh tmp/iowa-roads.osm.pbf out/19 iowa
 ./skeletron-routes.sh tmp/iowa-routes.osm.bz2 out/19 iowa

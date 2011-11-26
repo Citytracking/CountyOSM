@@ -72,7 +72,7 @@ osmosis \
     --bp completeWays=yes file=polys/16/16077-Power-County.txt      --wx out/16/e/16077-power-county.osm.bz2 \
     --bp completeWays=yes file=polys/16/16081-Teton-County.txt      --wx out/16/e/16081-teton-county.osm.bz2 \
 
-touch -r tmp/idaho.osm.pbf out/16/*.osm.???
+touch -r tmp/idaho.osm.pbf out/16/*/*.osm.???
 
 ./skeletron-roads.sh tmp/idaho-roads.osm.pbf out/16 idaho
 ./skeletron-routes.sh tmp/idaho-routes.osm.bz2 out/16 idaho

@@ -83,7 +83,7 @@ osmosis \
     --bp completeWays=yes file=polys/54/54101-Webster-County.txt    --wx out/54/s/54101-webster-county.osm.bz2 \
     --bp completeWays=yes file=polys/54/54109-Wyoming-County.txt    --wx out/54/s/54109-wyoming-county.osm.bz2 \
 
-touch -r tmp/west-virginia.osm.pbf out/54/*.osm.???
+touch -r tmp/west-virginia.osm.pbf out/54/*/*.osm.???
 
 ./skeletron-roads.sh tmp/west-virginia-roads.osm.pbf out/54 west-virginia
 ./skeletron-routes.sh tmp/west-virginia-routes.osm.bz2 out/54 west-virginia

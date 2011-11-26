@@ -143,7 +143,7 @@ osmosis \
     --bp completeWays=yes file=polys/29/29221-Washington-County.txt     --wx out/29/e/29221-washington-county.osm.bz2 \
     --bp completeWays=yes file=polys/29/29223-Wayne-County.txt          --wx out/29/e/29223-wayne-county.osm.bz2 \
 
-touch -r tmp/missouri.osm.pbf out/29/*.osm.???
+touch -r tmp/missouri.osm.pbf out/29/*/*.osm.???
 
 ./skeletron-roads.sh tmp/missouri-roads.osm.pbf out/29 missouri
 ./skeletron-routes.sh tmp/missouri-routes.osm.bz2 out/29 missouri

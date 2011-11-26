@@ -105,7 +105,7 @@ osmosis \
     --bp completeWays=yes file=polys/40/40141-Tillman-County.txt      --wx out/40/s/40141-tillman-county.osm.bz2 \
     --bp completeWays=yes file=polys/40/40149-Washita-County.txt      --wx out/40/s/40149-washita-county.osm.bz2 \
 
-touch -r tmp/oklahoma.osm.pbf out/40/*.osm.???
+touch -r tmp/oklahoma.osm.pbf out/40/*/*.osm.???
 
 ./skeletron-roads.sh tmp/oklahoma-roads.osm.pbf out/40 oklahoma
 ./skeletron-routes.sh tmp/oklahoma-routes.osm.bz2 out/40 oklahoma

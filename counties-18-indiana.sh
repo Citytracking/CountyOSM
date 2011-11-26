@@ -120,7 +120,7 @@ osmosis \
     --bp completeWays=yes file=polys/18/18179-Wells-County.txt       --wx out/18/e/18179-wells-county.osm.bz2 \
     --bp completeWays=yes file=polys/18/18183-Whitley-County.txt     --wx out/18/e/18183-whitley-county.osm.bz2 \
 
-touch -r tmp/indiana.osm.pbf out/18/*.osm.???
+touch -r tmp/indiana.osm.pbf out/18/*/*.osm.???
 
 ./skeletron-roads.sh tmp/indiana-roads.osm.pbf out/18 indiana
 ./skeletron-routes.sh tmp/indiana-routes.osm.bz2 out/18 indiana

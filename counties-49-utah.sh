@@ -57,7 +57,7 @@ osmosis \
     --bp completeWays=yes file=polys/49/49053-Washington-County.txt --wx out/49/s/49053-washington-county.osm.bz2 \
     --bp completeWays=yes file=polys/49/49055-Wayne-County.txt      --wx out/49/s/49055-wayne-county.osm.bz2 \
 
-touch -r tmp/utah.osm.pbf out/49/*.osm.???
+touch -r tmp/utah.osm.pbf out/49/*/*.osm.???
 
 ./skeletron-roads.sh tmp/utah-roads.osm.pbf out/49 utah
 ./skeletron-routes.sh tmp/utah-routes.osm.bz2 out/49 utah
