@@ -88,5 +88,5 @@ osmosis \
 
 touch -r tmp/california.osm.pbf out/06/*/*.osm.???
 
-./skeletron-roads.sh tmp/california-roads.osm.pbf out/06 california
-./skeletron-routes.sh tmp/california-routes.osm.bz2 out/06 california
+./skeletron-roads.sh tmp/california-roads.osm.pbf out/06 california CA
+./skeletron-routes.sh tmp/california-routes.osm.bz2 out/06 california CA

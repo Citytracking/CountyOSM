@@ -74,5 +74,5 @@ osmosis \
 
 touch -r tmp/idaho.osm.pbf out/16/*/*.osm.???
 
-./skeletron-roads.sh tmp/idaho-roads.osm.pbf out/16 idaho
-./skeletron-routes.sh tmp/idaho-routes.osm.bz2 out/16 idaho
+./skeletron-roads.sh tmp/idaho-roads.osm.pbf out/16 idaho ID
+./skeletron-routes.sh tmp/idaho-routes.osm.bz2 out/16 idaho ID

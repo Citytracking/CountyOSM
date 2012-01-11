@@ -13,8 +13,8 @@ osmosis --rb tmp/montana.osm.pbf \
         --tee outputCount=4 \
             --tf accept-relations "network=US:I" --used-way --used-node --wb omitmetadata=true tmp/montana-routes-A.osm.pbf \
             --tf accept-relations "network=US:US" --used-way --used-node --wb omitmetadata=true tmp/montana-routes-B.osm.pbf \
-            --tf accept-relations "network=US:UT" --used-way --used-node --wb omitmetadata=true tmp/montana-routes-C.osm.pbf \
-            --tf accept-relations "network=US:UT:CR" --used-way --used-node --wb omitmetadata=true tmp/montana-routes-D.osm.pbf \
+            --tf accept-relations "network=US:MT" --used-way --used-node --wb omitmetadata=true tmp/montana-routes-C.osm.pbf \
+            --tf accept-relations "network=US:MT:CR" --used-way --used-node --wb omitmetadata=true tmp/montana-routes-D.osm.pbf \
 
 osmosis \
     --rb tmp/montana-routes-A.osm.pbf \
@@ -86,5 +86,5 @@ osmosis \
 
 touch -r tmp/montana.osm.pbf out/30/*/*.osm.???
 
-./skeletron-roads.sh tmp/montana-roads.osm.pbf out/30 montana
-./skeletron-routes.sh tmp/montana-routes.osm.bz2 out/30 montana
+./skeletron-roads.sh tmp/montana-roads.osm.pbf out/30 montana MT
+./skeletron-routes.sh tmp/montana-routes.osm.bz2 out/30 montana MT

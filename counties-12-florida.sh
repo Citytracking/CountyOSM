@@ -97,5 +97,5 @@ osmosis \
 
 touch -r tmp/florida.osm.pbf out/12/*/*.osm.???
 
-./skeletron-roads.sh tmp/florida-roads.osm.pbf out/12 florida
-./skeletron-routes.sh tmp/florida-routes.osm.bz2 out/12 florida
+./skeletron-roads.sh tmp/florida-roads.osm.pbf out/12 florida FL
+./skeletron-routes.sh tmp/florida-routes.osm.bz2 out/12 florida FL

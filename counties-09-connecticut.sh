@@ -38,5 +38,5 @@ osmosis \
 
 touch -r tmp/connecticut.osm.pbf out/09/*.osm.???
 
-./skeletron-roads.sh tmp/connecticut-roads.osm.pbf out/09 connecticut
-./skeletron-routes.sh tmp/connecticut-routes.osm.bz2 out/09 connecticut
+./skeletron-roads.sh tmp/connecticut-roads.osm.pbf out/09 connecticut CT
+./skeletron-routes.sh tmp/connecticut-routes.osm.bz2 out/09 connecticut CT

@@ -13,8 +13,8 @@ osmosis --rb tmp/district-of-columbia.osm.pbf \
         --tee outputCount=4 \
             --tf accept-relations "network=US:I" --used-way --used-node --wb omitmetadata=true tmp/district-of-columbia-routes-A.osm.pbf \
             --tf accept-relations "network=US:US" --used-way --used-node --wb omitmetadata=true tmp/district-of-columbia-routes-B.osm.pbf \
-            --tf accept-relations "network=US:DE" --used-way --used-node --wb omitmetadata=true tmp/district-of-columbia-routes-C.osm.pbf \
-            --tf accept-relations "network=US:DE:CR" --used-way --used-node --wb omitmetadata=true tmp/district-of-columbia-routes-D.osm.pbf \
+            --tf accept-relations "network=US:DC" --used-way --used-node --wb omitmetadata=true tmp/district-of-columbia-routes-C.osm.pbf \
+            --tf accept-relations "network=US:DC:CR" --used-way --used-node --wb omitmetadata=true tmp/district-of-columbia-routes-D.osm.pbf \
 
 osmosis \
     --rb tmp/district-of-columbia-routes-A.osm.pbf \
@@ -31,5 +31,5 @@ osmosis \
 
 touch -r tmp/district-of-columbia.osm.pbf out/11/*.osm.???
 
-./skeletron-roads.sh tmp/district-of-columbia-roads.osm.pbf out/11 district-of-columbia
-./skeletron-routes.sh tmp/district-of-columbia-routes.osm.bz2 out/11 district-of-columbia
+./skeletron-roads.sh tmp/district-of-columbia-roads.osm.pbf out/11 district-of-columbia DC
+./skeletron-routes.sh tmp/district-of-columbia-routes.osm.bz2 out/11 district-of-columbia DC

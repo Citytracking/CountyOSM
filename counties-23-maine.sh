@@ -46,5 +46,5 @@ osmosis \
 
 touch -r tmp/maine.osm.pbf out/23/*/*.osm.???
 
-./skeletron-roads.sh tmp/maine-roads.osm.pbf out/23 maine
-./skeletron-routes.sh tmp/maine-routes.osm.bz2 out/23 maine
+./skeletron-roads.sh tmp/maine-roads.osm.pbf out/23 maine ME
+./skeletron-routes.sh tmp/maine-routes.osm.bz2 out/23 maine ME

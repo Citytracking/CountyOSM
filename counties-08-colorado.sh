@@ -94,5 +94,5 @@ osmosis \
 
 touch -r tmp/colorado.osm.pbf out/08/*/*.osm.???
 
-./skeletron-roads.sh tmp/colorado-roads.osm.pbf out/08 colorado
-./skeletron-routes.sh tmp/colorado-routes.osm.bz2 out/08 colorado
+./skeletron-roads.sh tmp/colorado-roads.osm.pbf out/08 colorado CO
+./skeletron-routes.sh tmp/colorado-routes.osm.bz2 out/08 colorado CO

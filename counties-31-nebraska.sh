@@ -123,5 +123,5 @@ osmosis \
 
 touch -r tmp/nebraska.osm.pbf out/31/*/*.osm.???
 
-./skeletron-roads.sh tmp/nebraska-roads.osm.pbf out/31 nebraska
-./skeletron-routes.sh tmp/nebraska-routes.osm.bz2 out/31 nebraska
+./skeletron-roads.sh tmp/nebraska-roads.osm.pbf out/31 nebraska NE
+./skeletron-routes.sh tmp/nebraska-routes.osm.bz2 out/31 nebraska NE

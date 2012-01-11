@@ -69,5 +69,5 @@ osmosis \
 
 touch -r tmp/washington.osm.pbf out/53/*/*.osm.???
 
-./skeletron-roads.sh tmp/washington-roads.osm.pbf out/53 washington
-./skeletron-routes.sh tmp/washington-routes.osm.bz2 out/53 washington
+./skeletron-roads.sh tmp/washington-roads.osm.pbf out/53 washington WA
+./skeletron-routes.sh tmp/washington-routes.osm.bz2 out/53 washington WA

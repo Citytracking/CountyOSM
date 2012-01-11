@@ -125,5 +125,5 @@ osmosis \
 
 touch -r tmp/tennessee.osm.pbf out/47/*.osm.???
 
-./skeletron-roads.sh tmp/tennessee-roads.osm.pbf out/47 tennessee
-./skeletron-routes.sh tmp/tennessee-routes.osm.bz2 out/47 tennessee
+./skeletron-roads.sh tmp/tennessee-roads.osm.pbf out/47 tennessee TN
+./skeletron-routes.sh tmp/tennessee-routes.osm.bz2 out/47 tennessee TN

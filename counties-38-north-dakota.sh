@@ -83,5 +83,5 @@ osmosis \
 
 touch -r tmp/north-dakota.osm.pbf out/38/*/*.osm.???
 
-./skeletron-roads.sh tmp/north-dakota-roads.osm.pbf out/38 north-dakota
-./skeletron-routes.sh tmp/north-dakota-routes.osm.bz2 out/38 north-dakota
+./skeletron-roads.sh tmp/north-dakota-roads.osm.pbf out/38 north-dakota ND
+./skeletron-routes.sh tmp/north-dakota-routes.osm.bz2 out/38 north-dakota ND

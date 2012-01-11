@@ -118,5 +118,5 @@ osmosis \
 
 touch -r tmp/ohio.osm.pbf out/39/*/*.osm.???
 
-./skeletron-roads.sh tmp/ohio-roads.osm.pbf out/39 ohio
-./skeletron-routes.sh tmp/ohio-routes.osm.bz2 out/39 ohio
+./skeletron-roads.sh tmp/ohio-roads.osm.pbf out/39 ohio OH
+./skeletron-routes.sh tmp/ohio-routes.osm.bz2 out/39 ohio OH
