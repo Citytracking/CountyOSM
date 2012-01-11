@@ -1,15 +1,15 @@
 .PHONY: all tiny \
-	    out/01 out/04 out/05 out/06 out/08 out/09 out/10 out/12 out/13 out/16 \
-	    out/17 out/18 out/19 out/20 out/21 out/22 out/23 out/24 out/25 out/26 \
-	    out/27 out/28 out/29 out/30 out/31 out/32 out/33 out/34 out/35 out/36 \
-	    out/37 out/38 out/39 out/40 out/41 out/42 out/44 out/45 out/46 out/47 \
-	    out/48 out/49 out/50 out/51 out/53 out/54 out/55 out/56
+	    out/01 out/04 out/05 out/06 out/08 out/09 out/10 out/11 out/12 out/13 \
+	    out/16 out/17 out/18 out/19 out/20 out/21 out/22 out/23 out/24 out/25 \
+	    out/26 out/27 out/28 out/29 out/30 out/31 out/32 out/33 out/34 out/35 \
+	    out/36 out/37 out/38 out/39 out/40 out/41 out/42 out/44 out/45 out/46 \
+	    out/47 out/48 out/49 out/50 out/51 out/53 out/54 out/55 out/56
 
-all: out/48 out/06 out/36 out/01 out/04 out/05 out/08 out/09 out/10 out/12 \
-	 out/13 out/16 out/17 out/18 out/19 out/20 out/21 out/22 out/23 out/24 \
-	 out/25 out/26 out/27 out/28 out/29 out/30 out/31 out/32 out/33 out/34 \
-	 out/35 out/37 out/38 out/39 out/40 out/41 out/42 out/44 out/45 out/46 \
-	 out/47 out/49 out/50 out/51 out/53 out/54 out/55 out/56
+all: out/48 out/06 out/36 out/01 out/04 out/05 out/08 out/09 out/10 out/11 \
+	 out/12 out/13 out/16 out/17 out/18 out/19 out/20 out/21 out/22 out/23 \
+	 out/24 out/25 out/26 out/27 out/28 out/29 out/30 out/31 out/32 out/33 \
+	 out/34 out/35 out/37 out/38 out/39 out/40 out/41 out/42 out/44 out/45 \
+	 out/46 out/47 out/49 out/50 out/51 out/53 out/54 out/55 out/56
 	#
 
 tiny: out/10 out/34 out/44
@@ -35,6 +35,9 @@ out/09:
 
 out/10:
 	./counties-10-delaware.sh
+
+out/11:
+	./counties-11-district-of-columbia.sh
 
 out/12:
 	./counties-12-florida.sh
