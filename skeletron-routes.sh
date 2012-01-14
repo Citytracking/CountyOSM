@@ -1,7 +1,7 @@
 #!/bin/sh -ex
 
-if [ $# -ne 4 ]; then
-    echo "Need a file argument, directory argument, prefix and source id argument.";
+if [ $# -ne 3 ]; then
+    echo "Need a file argument, directory argument, and prefix argument.";
     exit 1;
 fi
 
@@ -18,7 +18,6 @@ fi
 INPUT=$1;
 OUTDIR=$2;
 PREFIX=$3;
-SOURCE=$4;
 
 TMPDIR=`tempfile -d tmp -p skel-`;
 rm $TMPDIR && mkdir $TMPDIR;

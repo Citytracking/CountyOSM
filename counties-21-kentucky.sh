@@ -150,5 +150,5 @@ osmosis \
 
 touch -r tmp/kentucky.osm.pbf out/21/*/*.osm.???
 
-./skeletron-roads.sh tmp/kentucky-roads.osm.pbf out/21 kentucky KY
-./skeletron-routes.sh tmp/kentucky-routes.osm.bz2 out/21 kentucky KY
+./skeletron-roads.sh tmp/kentucky-roads.osm.pbf out/21 kentucky
+./skeletron-routes.sh tmp/kentucky-routes.osm.bz2 out/21 kentucky

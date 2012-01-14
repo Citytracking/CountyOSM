@@ -107,5 +107,5 @@ osmosis \
 
 touch -r tmp/oklahoma.osm.pbf out/40/*/*.osm.???
 
-./skeletron-roads.sh tmp/oklahoma-roads.osm.pbf out/40 oklahoma OK
-./skeletron-routes.sh tmp/oklahoma-routes.osm.bz2 out/40 oklahoma OK
+./skeletron-roads.sh tmp/oklahoma-roads.osm.pbf out/40 oklahoma
+./skeletron-routes.sh tmp/oklahoma-routes.osm.bz2 out/40 oklahoma

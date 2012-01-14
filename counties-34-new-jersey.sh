@@ -51,5 +51,5 @@ osmosis \
 
 touch -r tmp/new-jersey.osm.pbf out/34/*.osm.???
 
-./skeletron-roads.sh tmp/new-jersey-roads.osm.pbf out/34 new-jersey NJ
-./skeletron-routes.sh tmp/new-jersey-routes.osm.bz2 out/34 new-jersey NJ
+./skeletron-roads.sh tmp/new-jersey-roads.osm.pbf out/34 new-jersey
+./skeletron-routes.sh tmp/new-jersey-routes.osm.bz2 out/34 new-jersey

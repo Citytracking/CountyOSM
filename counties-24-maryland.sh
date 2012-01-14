@@ -54,5 +54,5 @@ osmosis \
 
 touch -r tmp/maryland.osm.pbf out/24/*.osm.???
 
-./skeletron-roads.sh tmp/maryland-roads.osm.pbf out/24 maryland MD
-./skeletron-routes.sh tmp/maryland-routes.osm.bz2 out/24 maryland MD
+./skeletron-roads.sh tmp/maryland-roads.osm.pbf out/24 maryland
+./skeletron-routes.sh tmp/maryland-routes.osm.bz2 out/24 maryland

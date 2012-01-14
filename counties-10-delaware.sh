@@ -33,5 +33,5 @@ osmosis \
 
 touch -r tmp/delaware.osm.pbf out/10/*.osm.???
 
-./skeletron-roads.sh tmp/delaware-roads.osm.pbf out/10 delaware DE
-./skeletron-routes.sh tmp/delaware-routes.osm.bz2 out/10 delaware DE
+./skeletron-roads.sh tmp/delaware-roads.osm.pbf out/10 delaware
+./skeletron-routes.sh tmp/delaware-routes.osm.bz2 out/10 delaware

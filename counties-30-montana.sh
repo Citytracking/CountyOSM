@@ -86,5 +86,5 @@ osmosis \
 
 touch -r tmp/montana.osm.pbf out/30/*/*.osm.???
 
-./skeletron-roads.sh tmp/montana-roads.osm.pbf out/30 montana MT
-./skeletron-routes.sh tmp/montana-routes.osm.bz2 out/30 montana MT
+./skeletron-roads.sh tmp/montana-roads.osm.pbf out/30 montana
+./skeletron-routes.sh tmp/montana-routes.osm.bz2 out/30 montana

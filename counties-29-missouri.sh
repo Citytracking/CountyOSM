@@ -145,5 +145,5 @@ osmosis \
 
 touch -r tmp/missouri.osm.pbf out/29/*/*.osm.???
 
-./skeletron-roads.sh tmp/missouri-roads.osm.pbf out/29 missouri MO
-./skeletron-routes.sh tmp/missouri-routes.osm.bz2 out/29 missouri MO
+./skeletron-roads.sh tmp/missouri-roads.osm.pbf out/29 missouri
+./skeletron-routes.sh tmp/missouri-routes.osm.bz2 out/29 missouri

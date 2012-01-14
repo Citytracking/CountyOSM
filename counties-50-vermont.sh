@@ -44,5 +44,5 @@ osmosis \
 
 touch -r tmp/vermont.osm.pbf out/50/*.osm.???
 
-./skeletron-roads.sh tmp/vermont-roads.osm.pbf out/50 vermont VT
-./skeletron-routes.sh tmp/vermont-routes.osm.bz2 out/50 vermont VT
+./skeletron-roads.sh tmp/vermont-roads.osm.pbf out/50 vermont
+./skeletron-routes.sh tmp/vermont-routes.osm.bz2 out/50 vermont

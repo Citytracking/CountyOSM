@@ -113,5 +113,5 @@ osmosis \
 
 touch -r tmp/michigan.osm.pbf out/26/*/*.osm.???
 
-./skeletron-roads.sh tmp/michigan-roads.osm.pbf out/26 michigan MI
-./skeletron-routes.sh tmp/michigan-routes.osm.bz2 out/26 michigan MI
+./skeletron-roads.sh tmp/michigan-roads.osm.pbf out/26 michigan
+./skeletron-routes.sh tmp/michigan-routes.osm.bz2 out/26 michigan

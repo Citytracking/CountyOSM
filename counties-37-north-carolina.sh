@@ -130,5 +130,5 @@ osmosis \
 
 touch -r tmp/north-carolina.osm.pbf out/37/*.osm.???
 
-./skeletron-roads.sh tmp/north-carolina-roads.osm.pbf out/37 north-carolina NC
-./skeletron-routes.sh tmp/north-carolina-routes.osm.bz2 out/37 north-carolina NC
+./skeletron-roads.sh tmp/north-carolina-roads.osm.pbf out/37 north-carolina
+./skeletron-routes.sh tmp/north-carolina-routes.osm.bz2 out/37 north-carolina

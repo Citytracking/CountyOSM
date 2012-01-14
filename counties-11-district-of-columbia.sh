@@ -31,5 +31,5 @@ osmosis \
 
 touch -r tmp/district-of-columbia.osm.pbf out/11/*.osm.???
 
-./skeletron-roads.sh tmp/district-of-columbia-roads.osm.pbf out/11 district-of-columbia DC
-./skeletron-routes.sh tmp/district-of-columbia-routes.osm.bz2 out/11 district-of-columbia DC
+./skeletron-roads.sh tmp/district-of-columbia-roads.osm.pbf out/11 district-of-columbia
+./skeletron-routes.sh tmp/district-of-columbia-routes.osm.bz2 out/11 district-of-columbia

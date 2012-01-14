@@ -132,5 +132,5 @@ osmosis \
 
 touch -r tmp/illinois.osm.pbf out/17/*/*.osm.???
 
-./skeletron-roads.sh tmp/illinois-roads.osm.pbf out/17 illinois IL
-./skeletron-routes.sh tmp/illinois-routes.osm.bz2 out/17 illinois IL
+./skeletron-roads.sh tmp/illinois-roads.osm.pbf out/17 illinois
+./skeletron-routes.sh tmp/illinois-routes.osm.bz2 out/17 illinois

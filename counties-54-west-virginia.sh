@@ -85,5 +85,5 @@ osmosis \
 
 touch -r tmp/west-virginia.osm.pbf out/54/*/*.osm.???
 
-./skeletron-roads.sh tmp/west-virginia-roads.osm.pbf out/54 west-virginia WV
-./skeletron-routes.sh tmp/west-virginia-routes.osm.bz2 out/54 west-virginia WV
+./skeletron-roads.sh tmp/west-virginia-roads.osm.pbf out/54 west-virginia
+./skeletron-routes.sh tmp/west-virginia-routes.osm.bz2 out/54 west-virginia

@@ -97,5 +97,5 @@ osmosis \
 
 touch -r tmp/alabama.osm.pbf out/01/*/*.osm.???
 
-./skeletron-roads.sh tmp/alabama-roads.osm.pbf out/01 alabama AL
-./skeletron-routes.sh tmp/alabama-routes.osm.bz2 out/01 alabama AL
+./skeletron-roads.sh tmp/alabama-roads.osm.pbf out/01 alabama
+./skeletron-routes.sh tmp/alabama-routes.osm.bz2 out/01 alabama

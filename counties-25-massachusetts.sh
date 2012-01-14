@@ -44,5 +44,5 @@ osmosis \
 
 touch -r tmp/massachusetts.osm.pbf out/25/*/*.osm.???
 
-./skeletron-roads.sh tmp/massachusetts-roads.osm.pbf out/25 massachusetts MA
-./skeletron-routes.sh tmp/massachusetts-routes.osm.bz2 out/25 massachusetts MA
+./skeletron-roads.sh tmp/massachusetts-roads.osm.pbf out/25 massachusetts
+./skeletron-routes.sh tmp/massachusetts-routes.osm.bz2 out/25 massachusetts
