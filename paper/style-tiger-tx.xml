@@ -1,7 +1,7 @@
-<Map background-color="rgb(255,255,255)" srs="+proj=lcc +lat_1=38.43333333333333 +lat_2=37.06666666666667 +lat_0=36.5 +lon_0=-120.5 +x_0=2000000 +y_0=500000 +ellps=GRS80 +units=m +no_defs">
+<Map background-color="rgb(255,255,255)" srs="+proj=lcc +lat_1=31.88333333333333 +lat_2=30.11666666666667 +lat_0=29.66666666666667 +lon_0=-100.3333333333333 +x_0=700000 +y_0=3000000 +ellps=GRS80 +units=m +no_defs">
   <Style name="line style 11">
     <Rule name="rule 10">
-      <Filter>([GEOID10]='06001')</Filter>
+      <Filter>([GEOID10]='48453')</Filter>
       <MaxScaleDenominator>49999</MaxScaleDenominator>
       <LineSymbolizer>
         <CssParameter name="stroke">rgb(204,204,204)</CssParameter>
@@ -11,7 +11,7 @@
       </LineSymbolizer>
     </Rule>
     <Rule name="rule 11">
-      <Filter>([GEOID10]='06001')</Filter>
+      <Filter>([GEOID10]='48453')</Filter>
       <MinScaleDenominator>50000</MinScaleDenominator>
       <MaxScaleDenominator>99999</MaxScaleDenominator>
       <LineSymbolizer>
@@ -22,7 +22,7 @@
       </LineSymbolizer>
     </Rule>
     <Rule name="rule 12">
-      <Filter>([GEOID10]='06001')</Filter>
+      <Filter>([GEOID10]='48453')</Filter>
       <MinScaleDenominator>100000</MinScaleDenominator>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
       <LineSymbolizer>
@@ -33,7 +33,7 @@
       </LineSymbolizer>
     </Rule>
     <Rule name="rule 13">
-      <Filter>([GEOID10]='06001')</Filter>
+      <Filter>([GEOID10]='48453')</Filter>
       <MinScaleDenominator>200001</MinScaleDenominator>
       <LineSymbolizer>
         <CssParameter name="stroke">rgb(204,204,204)</CssParameter>
@@ -118,16 +118,16 @@
   </Style>
   <Style name="polygon style 8">
     <Rule name="rule 9">
-      <Filter>not (([GEOID10]='06001'))</Filter>
+      <Filter>not (([GEOID10]='48453'))</Filter>
       <PolygonSymbolizer>
         <CssParameter name="fill">rgb(255,255,255)</CssParameter>
       </PolygonSymbolizer>
     </Rule>
   </Style>
-  <Layer name="layer 7" srs="+proj=lcc +lat_1=38.43333333333333 +lat_2=37.06666666666667 +lat_0=36.5 +lon_0=-120.5 +x_0=2000000 +y_0=500000 +ellps=GRS80 +units=m +no_defs">
+  <Layer name="layer 7" srs="+proj=lcc +lat_1=31.88333333333333 +lat_2=30.11666666666667 +lat_0=29.66666666666667 +lon_0=-100.3333333333333 +x_0=700000 +y_0=3000000 +ellps=GRS80 +units=m +no_defs">
     <StyleName>line style 4</StyleName>
     <Datasource>
-      <Parameter name="file">/home/migurski/public_html/CountyOSM/paper/alameda_ca_roads-state</Parameter>
+      <Parameter name="file">/home/migurski/public_html/CountyOSM/paper/travis_tx_roads-state</Parameter>
       <Parameter name="type">shape</Parameter>
     </Datasource>
   </Layer>
