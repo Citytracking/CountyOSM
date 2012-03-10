@@ -5,6 +5,13 @@ out.png: style.xml
 style.xml: style.mml alameda_ca_roads-state.shp
 	cascadenik-compile.py style.mml $@
 
+out-tiger.png: style-tiger.xml
+	nik2img.py -e 1835324 605543 1916490 660850 -d 2000 1350 -v style-tiger.xml $@
+	optipng -zc 9 -zm 8 -zs 3 -f 0 -q $@
+
+style-tiger.xml: style-tiger.mml alameda_ca_roads-state.shp
+	cascadenik-compile.py style-tiger.mml $@
+
 out-recent.png: style-recent.xml
 	nik2img.py -e 1835324 605543 1916490 660850 -d 2000 1350 -v style-recent.xml $@
 	optipng -zc 9 -zm 8 -zs 3 -f 0 -q $@
