@@ -1,9 +1,16 @@
 out.png: style.xml
-	nik2img.py -e 1835324 605543 1916490 660850 -d 2000 1500 -v style.xml $@
+	nik2img.py -e 1835324 605543 1916490 660850 -d 2000 1350 -v style.xml $@
 	optipng -zc 9 -zm 8 -zs 3 -f 0 -q $@
 
 style.xml: style.mml alameda_ca_roads-state.shp
 	cascadenik-compile.py style.mml $@
+
+out-recent.png: style-recent.xml
+	nik2img.py -e 1835324 605543 1916490 660850 -d 2000 1350 -v style-recent.xml $@
+	optipng -zc 9 -zm 8 -zs 3 -f 0 -q $@
+
+style-recent.xml: style-recent.mml alameda_ca_roads-state.shp
+	cascadenik-compile.py style-recent.mml $@
 
 alameda_ca_roads-state.shp: alameda_ca_roads-merc.shp
 	rm -f alameda_ca_roads-state.shp alameda_ca_roads-state.dbf alameda_ca_roads-state.prj alameda_ca_roads-state.shx

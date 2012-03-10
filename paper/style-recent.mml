@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Run me:
+    nik2img.py -e -2500000 -2000000 2500000 1500000 -d 3000 2000 -v style.xml usa.png
+
+-->
+<Map srs="+proj=lcc +lat_1=38.43333333333333 +lat_2=37.06666666666667 +lat_0=36.5 +lon_0=-120.5 +x_0=2000000 +y_0=500000 +ellps=GRS80 +units=m +no_defs">
+
+    <Stylesheet><![CDATA[
+        
+        Map { map-bgcolor: #fff; }
+        
+        Layer
+        {
+            line-cap: square;
+            line-join: round;
+        }
+        
+        #counties[GEOID10="06001"]
+        {
+            line-width: 3;
+            line-color: #ccc;
+            line-opacity: 1;
+        }
+    
+        #counties[GEOID10!="06001"]
+        {
+            polygon-fill: #fff;
+        }
+    
+        #lines
+        {
+            line-width: .5;
+            line-color: #000;
+            line-opacity: 1;
+        }
+        
+        #lines[days_ago<150] { line-width: 1; }
+        #lines[days_ago<120] { line-width: 2; }
+        #lines[days_ago<90] { line-width: 4; }
+        #lines[days_ago<60] { line-width: 8; }
+        #lines[days_ago<30] { line-width: 16; }
+    
+       /*
+        * smaller
+        */
+    
+        #counties[GEOID10="06001"][scale-denominator>200000]
+        {
+            line-width: 1.5;
+        }
+    
+        #lines[scale-denominator>200000]
+        {
+            line-width: .25;
+        }
+    
+        #lines[days_ago<150][scale-denominator>200000] { line-width: .5; }
+        #lines[days_ago<120][scale-denominator>200000] { line-width: 1; }
+        #lines[days_ago<90][scale-denominator>200000] { line-width: 2; }
+        #lines[days_ago<60][scale-denominator>200000] { line-width: 4; }
+        #lines[days_ago<30][scale-denominator>200000] { line-width: 8; }
+    
+       /*
+        * bigger
+        */
+    
+        #counties[GEOID10="06001"][scale-denominator<100000]
+        {
+            line-width: 6;
+        }
+    
+        #lines[scale-denominator<100000]
+        {
+            line-width: 1;
+        }
+    
+        #lines[days_ago<150][scale-denominator<100000] { line-width: 2; }
+        #lines[days_ago<120][scale-denominator<100000] { line-width: 4; }
+        #lines[days_ago<90][scale-denominator<100000] { line-width: 8; }
+        #lines[days_ago<60][scale-denominator<100000] { line-width: 16; }
+        #lines[days_ago<30][scale-denominator<100000] { line-width: 32; }
+    
+       /*
+        * still bigger
+        */
+    
+        #counties[GEOID10="06001"][scale-denominator<50000]
+        {
+            line-width: 12;
+        }
+    
+        #lines[scale-denominator<50000]
+        {
+            line-width: 2;
+        }
+    
+        #lines[days_ago<150][scale-denominator<50000] { line-width: 4; }
+        #lines[days_ago<120][scale-denominator<50000] { line-width: 8; }
+        #lines[days_ago<90][scale-denominator<50000] { line-width: 16; }
+        #lines[days_ago<60][scale-denominator<50000] { line-width: 32; }
+        #lines[days_ago<30][scale-denominator<50000] { line-width: 64; }
+    
+    ]]></Stylesheet>
+
+	<Layer id="lines" srs="+proj=lcc +lat_1=38.43333333333333 +lat_2=37.06666666666667 +lat_0=36.5 +lon_0=-120.5 +x_0=2000000 +y_0=500000 +ellps=GRS80 +units=m +no_defs">
+        <Datasource>
+            <Parameter name="type">shape</Parameter>
+            <Parameter name="file">alameda_ca_roads-state</Parameter>
+        </Datasource>
+    </Layer>
+
+	<Layer id="counties" srs="+proj=lcc +lat_1=38.43333333333333 +lat_2=37.06666666666667 +lat_0=36.5 +lon_0=-120.5 +x_0=2000000 +y_0=500000 +ellps=GRS80 +units=m +no_defs">
+        <Datasource>
+            <Parameter name="type">shape</Parameter>
+            <Parameter name="file">tl_2010_us_county10-state</Parameter>
+        </Datasource>
+    </Layer>
+
+</Map>
