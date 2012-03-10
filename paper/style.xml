@@ -1,6 +1,6 @@
 <Map background-color="rgb(255,255,255)" srs="+proj=lcc +lat_1=38.43333333333333 +lat_2=37.06666666666667 +lat_0=36.5 +lon_0=-120.5 +x_0=2000000 +y_0=500000 +ellps=GRS80 +units=m +no_defs">
   <Style name="line style 11">
-    <Rule name="rule 10">
+    <Rule name="rule 22">
       <Filter>([GEOID10]='06001')</Filter>
       <MaxScaleDenominator>49999</MaxScaleDenominator>
       <LineSymbolizer>
@@ -10,7 +10,7 @@
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
     </Rule>
-    <Rule name="rule 11">
+    <Rule name="rule 23">
       <Filter>([GEOID10]='06001')</Filter>
       <MinScaleDenominator>50000</MinScaleDenominator>
       <MaxScaleDenominator>99999</MaxScaleDenominator>
@@ -21,7 +21,7 @@
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
     </Rule>
-    <Rule name="rule 12">
+    <Rule name="rule 24">
       <Filter>([GEOID10]='06001')</Filter>
       <MinScaleDenominator>100000</MinScaleDenominator>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
@@ -32,7 +32,7 @@
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
     </Rule>
-    <Rule name="rule 13">
+    <Rule name="rule 25">
       <Filter>([GEOID10]='06001')</Filter>
       <MinScaleDenominator>200001</MinScaleDenominator>
       <LineSymbolizer>
@@ -45,16 +45,14 @@
   </Style>
   <Style name="line style 4">
     <Rule name="rule 1">
-      <Filter>not (([is_tiger]='yes'))</Filter>
+      <Filter>(((not (([highway]='trunk')) and not (([highway]='primary'))) and not (([highway]='motorway'))) and not (([highway]='motorway_link')))</Filter>
       <MaxScaleDenominator>49999</MaxScaleDenominator>
       <LineSymbolizer>
-        <CssParameter name="stroke-width">2</CssParameter>
-        <CssParameter name="stroke-opacity">0.5</CssParameter>
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
     </Rule>
     <Rule name="rule 2">
-      <Filter>([is_tiger]='yes')</Filter>
+      <Filter>([highway]='motorway')</Filter>
       <MaxScaleDenominator>49999</MaxScaleDenominator>
       <LineSymbolizer>
         <CssParameter name="stroke-width">12</CssParameter>
@@ -62,16 +60,40 @@
       </LineSymbolizer>
     </Rule>
     <Rule name="rule 3">
-      <Filter>not (([is_tiger]='yes'))</Filter>
-      <MinScaleDenominator>50000</MinScaleDenominator>
-      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <Filter>([highway]='motorway_link')</Filter>
+      <MaxScaleDenominator>49999</MaxScaleDenominator>
       <LineSymbolizer>
-        <CssParameter name="stroke-opacity">0.5</CssParameter>
+        <CssParameter name="stroke-width">3.5</CssParameter>
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
     </Rule>
     <Rule name="rule 4">
-      <Filter>([is_tiger]='yes')</Filter>
+      <Filter>([highway]='primary')</Filter>
+      <MaxScaleDenominator>49999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">3.5</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 5">
+      <Filter>([highway]='trunk')</Filter>
+      <MaxScaleDenominator>49999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">3.5</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 6">
+      <Filter>(((not (([highway]='trunk')) and not (([highway]='primary'))) and not (([highway]='motorway'))) and not (([highway]='motorway_link')))</Filter>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">0.5</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 7">
+      <Filter>([highway]='motorway')</Filter>
       <MinScaleDenominator>50000</MinScaleDenominator>
       <MaxScaleDenominator>99999</MaxScaleDenominator>
       <LineSymbolizer>
@@ -79,18 +101,44 @@
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
     </Rule>
-    <Rule name="rule 5">
-      <Filter>not (([is_tiger]='yes'))</Filter>
-      <MinScaleDenominator>100000</MinScaleDenominator>
-      <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Rule name="rule 8">
+      <Filter>([highway]='motorway_link')</Filter>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
       <LineSymbolizer>
-        <CssParameter name="stroke-width">0.5</CssParameter>
-        <CssParameter name="stroke-opacity">0.5</CssParameter>
+        <CssParameter name="stroke-width">1.7</CssParameter>
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
     </Rule>
-    <Rule name="rule 6">
-      <Filter>([is_tiger]='yes')</Filter>
+    <Rule name="rule 9">
+      <Filter>([highway]='primary')</Filter>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">1.7</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 10">
+      <Filter>([highway]='trunk')</Filter>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">1.7</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 11">
+      <Filter>(((not (([highway]='trunk')) and not (([highway]='primary'))) and not (([highway]='motorway'))) and not (([highway]='motorway_link')))</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">0.25</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 12">
+      <Filter>([highway]='motorway')</Filter>
       <MinScaleDenominator>100000</MinScaleDenominator>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
       <LineSymbolizer>
@@ -98,26 +146,76 @@
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
     </Rule>
-    <Rule name="rule 7">
-      <Filter>not (([is_tiger]='yes'))</Filter>
-      <MinScaleDenominator>200001</MinScaleDenominator>
+    <Rule name="rule 13">
+      <Filter>([highway]='motorway_link')</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
       <LineSymbolizer>
-        <CssParameter name="stroke-width">0.25</CssParameter>
-        <CssParameter name="stroke-opacity">0.5</CssParameter>
+        <CssParameter name="stroke-width">0.9</CssParameter>
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
     </Rule>
-    <Rule name="rule 8">
-      <Filter>([is_tiger]='yes')</Filter>
+    <Rule name="rule 14">
+      <Filter>([highway]='primary')</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">0.9</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 15">
+      <Filter>([highway]='trunk')</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">0.9</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 16">
+      <Filter>(((not (([highway]='trunk')) and not (([highway]='primary'))) and not (([highway]='motorway'))) and not (([highway]='motorway_link')))</Filter>
+      <MinScaleDenominator>200001</MinScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">0.125</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 17">
+      <Filter>([highway]='motorway')</Filter>
       <MinScaleDenominator>200001</MinScaleDenominator>
       <LineSymbolizer>
         <CssParameter name="stroke-width">1.5</CssParameter>
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
     </Rule>
+    <Rule name="rule 18">
+      <Filter>([highway]='motorway_link')</Filter>
+      <MinScaleDenominator>200001</MinScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">0.43</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 19">
+      <Filter>([highway]='primary')</Filter>
+      <MinScaleDenominator>200001</MinScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">0.43</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 20">
+      <Filter>([highway]='trunk')</Filter>
+      <MinScaleDenominator>200001</MinScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">0.43</CssParameter>
+        <CssParameter name="stroke-linecap">square</CssParameter>
+      </LineSymbolizer>
+    </Rule>
   </Style>
   <Style name="polygon style 8">
-    <Rule name="rule 9">
+    <Rule name="rule 21">
       <Filter>not (([GEOID10]='06001'))</Filter>
       <PolygonSymbolizer>
         <CssParameter name="fill">rgb(255,255,255)</CssParameter>

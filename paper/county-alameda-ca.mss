@@ -1,6 +1,8 @@
 #counties[GEOID10="06001"]
 {
     line-width: 3;
+    line-color: #ccc;
+    line-opacity: 1;
 }
 
 #counties[GEOID10!="06001"]

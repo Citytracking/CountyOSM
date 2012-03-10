@@ -20,7 +20,7 @@ out-recent-tx.png: style-recent-tx.xml
 
 
 
-style.xml: style.mml alameda_ca_roads-state.shp
+style.xml: style.mml county-alameda-ca.mss alameda_ca_roads-state.shp
 	cascadenik-compile.py style.mml $@
 
 style-tiger.xml: style-tiger.mml style-tiger.mss county-alameda-ca.mss alameda_ca_roads-state.shp

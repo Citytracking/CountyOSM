@@ -6,12 +6,6 @@ Layer
     line-join: round;
 }
 
-#counties
-{
-    line-color: #ccc;
-    line-opacity: 1;
-}
-
 #lines
 {
     line-width: .5;
