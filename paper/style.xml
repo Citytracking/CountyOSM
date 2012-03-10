@@ -1,0 +1,70 @@
+<Map background-color="rgb(255,255,255)" srs="+proj=lcc +lat_1=38.43333333333333 +lat_2=37.06666666666667 +lat_0=36.5 +lon_0=-120.5 +x_0=2000000 +y_0=500000 +ellps=GRS80 +units=m +no_defs">
+  <Style name="line style 11">
+    <Rule name="rule 8">
+      <Filter>([GEOID10]='06001')</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(204,204,204)</CssParameter>
+        <CssParameter name="stroke-width">3</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="line style 4">
+    <Rule name="rule 1">
+      <Filter>([days_ago]&lt;30)</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">16</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 2">
+      <Filter>(([days_ago]&gt;=30) and ([days_ago]&lt;60))</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 3">
+      <Filter>(([days_ago]&gt;=60) and ([days_ago]&lt;90))</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">4</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 4">
+      <Filter>(([days_ago]&gt;=90) and ([days_ago]&lt;120))</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">2</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 5">
+      <Filter>(([days_ago]&gt;=120) and ([days_ago]&lt;150))</Filter>
+      <LineSymbolizer />
+    </Rule>
+    <Rule name="rule 6">
+      <Filter>([days_ago]&gt;=150)</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">0.5</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="polygon style 8">
+    <Rule name="rule 7">
+      <Filter>not (([GEOID10]='06001'))</Filter>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(255,255,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+  </Style>
+  <Layer name="layer 7" srs="+proj=lcc +lat_1=38.43333333333333 +lat_2=37.06666666666667 +lat_0=36.5 +lon_0=-120.5 +x_0=2000000 +y_0=500000 +ellps=GRS80 +units=m +no_defs">
+    <StyleName>line style 4</StyleName>
+    <Datasource>
+      <Parameter name="file">/home/migurski/public_html/CountyOSM/paper/alameda_ca_roads-state</Parameter>
+      <Parameter name="type">shape</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 14" srs="+proj=lcc +lat_1=38.43333333333333 +lat_2=37.06666666666667 +lat_0=36.5 +lon_0=-120.5 +x_0=2000000 +y_0=500000 +ellps=GRS80 +units=m +no_defs">
+    <StyleName>polygon style 8</StyleName>
+    <StyleName>line style 11</StyleName>
+    <Datasource>
+      <Parameter name="file">/home/migurski/public_html/CountyOSM/paper/tl_2010_us_county10-state</Parameter>
+      <Parameter name="type">shape</Parameter>
+    </Datasource>
+  </Layer>
+</Map>
