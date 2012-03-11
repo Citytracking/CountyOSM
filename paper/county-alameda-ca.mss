@@ -1,13 +1,23 @@
 #counties[GEOID10="06001"]
 {
     line-width: 3;
-    line-color: #ccc;
-    line-opacity: 1;
+    line-color: #000;
+    line-opacity: .2;
 }
 
 #counties[GEOID10!="06001"]
 {
     polygon-fill: #fff;
+    polygon-opacity: .6;
+}
+
+/*
+* still smaller
+*/
+
+#counties[GEOID10="06001"][scale-denominator>200000]
+{
+    line-width: .75;
 }
 
 /*

@@ -2,6 +2,10 @@ out.png: style.xml
 	nik2img.py -e 1835324 605543 1916490 660850 -d 2000 1350 -v style.xml $@
 	optipng -zc 9 -zm 8 -zs 3 -f 0 -q $@
 
+out-tx.png: style-tx.xml
+	nik2img.py -e 899658 3037222 985395 3110853 -d 1800 1450 -v style-tx.xml $@
+	optipng -zc 9 -zm 8 -zs 3 -f 0 -q $@
+
 out-tiger.png: style-tiger.xml
 	nik2img.py -e 1835324 605543 1916490 660850 -d 2000 1350 -v style-tiger.xml $@
 	optipng -zc 9 -zm 8 -zs 3 -f 0 -q $@
@@ -20,8 +24,11 @@ out-recent-tx.png: style-recent-tx.xml
 
 
 
-style.xml: style.mml county-alameda-ca.mss alameda_ca_roads-state.shp
+style.xml: style.mml style.mss county-alameda-ca.mss alameda_ca_roads-state.shp
 	cascadenik-compile.py style.mml $@
+
+style-tx.xml: style-tx.mml style.mss county-travis-tx.mss travis_tx_roads-state.shp
+	cascadenik-compile.py style-tx.mml $@
 
 style-tiger.xml: style-tiger.mml style-tiger.mss county-alameda-ca.mss alameda_ca_roads-state.shp
 	cascadenik-compile.py style-tiger.mml $@

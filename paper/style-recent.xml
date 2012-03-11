@@ -4,8 +4,8 @@
       <Filter>([GEOID10]='06001')</Filter>
       <MaxScaleDenominator>49999</MaxScaleDenominator>
       <LineSymbolizer>
-        <CssParameter name="stroke">rgb(204,204,204)</CssParameter>
         <CssParameter name="stroke-width">12</CssParameter>
+        <CssParameter name="stroke-opacity">0.2</CssParameter>
         <CssParameter name="stroke-linejoin">round</CssParameter>
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
@@ -15,8 +15,8 @@
       <MinScaleDenominator>50000</MinScaleDenominator>
       <MaxScaleDenominator>99999</MaxScaleDenominator>
       <LineSymbolizer>
-        <CssParameter name="stroke">rgb(204,204,204)</CssParameter>
         <CssParameter name="stroke-width">6</CssParameter>
+        <CssParameter name="stroke-opacity">0.2</CssParameter>
         <CssParameter name="stroke-linejoin">round</CssParameter>
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
@@ -26,8 +26,8 @@
       <MinScaleDenominator>100000</MinScaleDenominator>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
       <LineSymbolizer>
-        <CssParameter name="stroke">rgb(204,204,204)</CssParameter>
         <CssParameter name="stroke-width">3</CssParameter>
+        <CssParameter name="stroke-opacity">0.2</CssParameter>
         <CssParameter name="stroke-linejoin">round</CssParameter>
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
@@ -36,8 +36,8 @@
       <Filter>([GEOID10]='06001')</Filter>
       <MinScaleDenominator>200001</MinScaleDenominator>
       <LineSymbolizer>
-        <CssParameter name="stroke">rgb(204,204,204)</CssParameter>
         <CssParameter name="stroke-width">1.5</CssParameter>
+        <CssParameter name="stroke-opacity">0.2</CssParameter>
         <CssParameter name="stroke-linejoin">round</CssParameter>
         <CssParameter name="stroke-linecap">square</CssParameter>
       </LineSymbolizer>
@@ -275,6 +275,7 @@
       <Filter>not (([GEOID10]='06001'))</Filter>
       <PolygonSymbolizer>
         <CssParameter name="fill">rgb(255,255,255)</CssParameter>
+        <CssParameter name="fill-opacity">0.6</CssParameter>
       </PolygonSymbolizer>
     </Rule>
   </Style>
