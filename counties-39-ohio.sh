@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/39/n out/39/s
 
-curl -Rs -o tmp/ohio.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/ohio.osm.pbf
+curl -Rs -o tmp/ohio.osm.pbf -L http://download.geofabrik.de/north-america/us/ohio-latest.osm.pbf
 
 osmosis --rb tmp/ohio.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

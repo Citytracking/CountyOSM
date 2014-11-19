@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/25/m out/25/i
 
-curl -Rs -o tmp/massachusetts.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/massachusetts.osm.pbf
+curl -Rs -o tmp/massachusetts.osm.pbf -L http://download.geofabrik.de/north-america/us/massachusetts-latest.osm.pbf
 
 osmosis --rb tmp/massachusetts.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

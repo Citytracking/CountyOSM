@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/55/n out/55/c out/55/s
 
-curl -Rs -o tmp/wisconsin.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/wisconsin.osm.pbf
+curl -Rs -o tmp/wisconsin.osm.pbf -L http://download.geofabrik.de/north-america/us/wisconsin-latest.osm.pbf
 
 osmosis --rb tmp/wisconsin.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

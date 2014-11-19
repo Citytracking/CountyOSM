@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/34
 
-curl -Rs -o tmp/new-jersey.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/new-jersey.osm.pbf
+curl -Rs -o tmp/new-jersey.osm.pbf -L http://download.geofabrik.de/north-america/us/new-jersey-latest.osm.pbf
 
 osmosis --rb tmp/new-jersey.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/23/w out/23/e
 
-curl -Rs -o tmp/maine.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/maine.osm.pbf
+curl -Rs -o tmp/maine.osm.pbf -L http://download.geofabrik.de/north-america/us/maine-latest.osm.pbf
 
 osmosis --rb tmp/maine.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

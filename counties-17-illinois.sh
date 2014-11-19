@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/17/w out/17/e
 
-curl -Rs -o tmp/illinois.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/illinois.osm.pbf
+curl -Rs -o tmp/illinois.osm.pbf -L http://download.geofabrik.de/north-america/us/illinois-latest.osm.pbf
 
 osmosis --rb tmp/illinois.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

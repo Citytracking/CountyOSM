@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/27/n out/27/c out/27/s
 
-curl -Rs -o tmp/minnesota.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/minnesota.osm.pbf
+curl -Rs -o tmp/minnesota.osm.pbf -L http://download.geofabrik.de/north-america/us/minnesota-latest.osm.pbf
 
 osmosis --rb tmp/minnesota.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/21/n out/21/s
 
-curl -Rs -o tmp/kentucky.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/kentucky.osm.pbf
+curl -Rs -o tmp/kentucky.osm.pbf -L http://download.geofabrik.de/north-america/us/kentucky-latest.osm.pbf
 
 osmosis --rb tmp/kentucky.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

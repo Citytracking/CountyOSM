@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/06/i out/06/ii out/06/iii out/06/iv out/06/v out/06/vi
 
-curl -Rs -o tmp/california.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/california.osm.pbf
+curl -Rs -o tmp/california.osm.pbf -L http://download.geofabrik.de/north-america/us/california-latest.osm.pbf
 
 osmosis --rb tmp/california.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

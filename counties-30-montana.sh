@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/30/n out/30/c out/30/s
 
-curl -Rs -o tmp/montana.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/montana.osm.pbf
+curl -Rs -o tmp/montana.osm.pbf -L http://download.geofabrik.de/north-america/us/montana-latest.osm.pbf
 
 osmosis --rb tmp/montana.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

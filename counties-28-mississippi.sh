@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/28/w out/28/e
 
-curl -Rs -o tmp/mississippi.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/mississippi.osm.pbf
+curl -Rs -o tmp/mississippi.osm.pbf -L http://download.geofabrik.de/north-america/us/mississippi-latest.osm.pbf
 
 osmosis --rb tmp/mississippi.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

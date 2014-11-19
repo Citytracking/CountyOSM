@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/38/n out/38/s
 
-curl -Rs -o tmp/north-dakota.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/north-dakota.osm.pbf
+curl -Rs -o tmp/north-dakota.osm.pbf -L http://download.geofabrik.de/north-america/us/north-dakota-latest.osm.pbf
 
 osmosis --rb tmp/north-dakota.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

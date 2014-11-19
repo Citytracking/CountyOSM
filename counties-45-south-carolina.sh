@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/45/n out/45/s
 
-curl -Rs -o tmp/south-carolina.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/south-carolina.osm.pbf
+curl -Rs -o tmp/south-carolina.osm.pbf -L http://download.geofabrik.de/north-america/us/south-carolina-latest.osm.pbf
 
 osmosis --rb tmp/south-carolina.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
