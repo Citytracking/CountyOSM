@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/48/n out/48/nc out/48/c out/48/sc out/48/s
 
-curl -Rs -o tmp/texas.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/texas.osm.pbf
+curl -Rs -o tmp/texas.osm.pbf -L http://download.geofabrik.de/north-america/us/texas-latest.osm.pbf
 
 osmosis --rb tmp/texas.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

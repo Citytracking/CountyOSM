@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/24
 
-curl -Rs -o tmp/maryland.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/maryland.osm.pbf
+curl -Rs -o tmp/maryland.osm.pbf -L http://download.geofabrik.de/north-america/us/maryland-latest.osm.pbf
 
 osmosis --rb tmp/maryland.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

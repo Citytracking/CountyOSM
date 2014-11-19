@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/49/n out/49/c out/49/s
 
-curl -Rs -o tmp/utah.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/utah.osm.pbf
+curl -Rs -o tmp/utah.osm.pbf -L http://download.geofabrik.de/north-america/us/utah-latest.osm.pbf
 
 osmosis --rb tmp/utah.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

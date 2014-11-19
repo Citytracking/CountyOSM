@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/12/n out/12/w out/12/e
 
-curl -Rs -o tmp/florida.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/florida.osm.pbf
+curl -Rs -o tmp/florida.osm.pbf -L http://download.geofabrik.de/north-america/us/florida-latest.osm.pbf
 
 osmosis --rb tmp/florida.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

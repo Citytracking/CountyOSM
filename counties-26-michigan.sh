@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/26/n out/26/c out/26/s
 
-curl -Rs -o tmp/michigan.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/michigan.osm.pbf
+curl -Rs -o tmp/michigan.osm.pbf -L http://download.geofabrik.de/north-america/us/michigan-latest.osm.pbf
 
 osmosis --rb tmp/michigan.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

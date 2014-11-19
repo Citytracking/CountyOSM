@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/35/w out/35/c out/35/e
 
-curl -Rs -o tmp/new-mexico.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/new-mexico.osm.pbf
+curl -Rs -o tmp/new-mexico.osm.pbf -L http://download.geofabrik.de/north-america/us/new-mexico-latest.osm.pbf
 
 osmosis --rb tmp/new-mexico.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

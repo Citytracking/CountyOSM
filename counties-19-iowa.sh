@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/19/n out/19/s
 
-curl -Rs -o tmp/iowa.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/iowa.osm.pbf
+curl -Rs -o tmp/iowa.osm.pbf -L http://download.geofabrik.de/north-america/us/iowa-latest.osm.pbf
 
 osmosis --rb tmp/iowa.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \

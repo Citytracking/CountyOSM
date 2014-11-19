@@ -3,7 +3,7 @@
 mkdir -p tmp
 mkdir -p out/16/w out/16/c out/16/e
 
-curl -Rs -o tmp/idaho.osm.pbf -L http://download.geofabrik.de/osm/north-america/us/idaho.osm.pbf
+curl -Rs -o tmp/idaho.osm.pbf -L http://download.geofabrik.de/north-america/us/idaho-latest.osm.pbf
 
 osmosis --rb tmp/idaho.osm.pbf \
     --tf accept-ways "highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,residential,unclassified,road,service,minor,footpath,track,footway,steps,pedestrian,path,cycleway" \
